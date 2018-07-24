@@ -1,0 +1,13 @@
+# This file was updated by Duplicator Pro on 2018-07-24 21:28:06.
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /sdck/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /sdck/index.php [L]
+</IfModule>
+
+# END WordPress
