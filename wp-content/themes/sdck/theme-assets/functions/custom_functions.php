@@ -11,7 +11,7 @@ function get_related_author_posts() {
     $output .= '</ul>';
     wp_reset_query();
     return $output;
-    
+
 }
 
 function get_custom_taxonomies($post, $taxonomy = "") {
@@ -78,7 +78,7 @@ add_filter('post_type_link', 'brand_permalink', 1, 3);
 
 function brand_permalink($permalink, $post_id, $leavename) {
     //con %brand% catturo il rewrite del Custom Post Type
-    if (strpos($permalink, '%blog-category%') === FALSE)
+    if (strpos($permalink, '%blog_category%') === FALSE)
         return $permalink;
     // Get post
     $post = get_post($post_id);
@@ -86,13 +86,13 @@ function brand_permalink($permalink, $post_id, $leavename) {
         return $permalink;
 
     // Get taxonomy terms
-    $terms = wp_get_object_terms($post->ID, 'blog-category');
+    $terms = wp_get_object_terms($post->ID, 'blog_category');
     if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
         $taxonomy_slug = $terms[0]->slug;
     else
         $taxonomy_slug = 'no-blog-category';
 
-    return str_replace('%blog-category%', $taxonomy_slug, $permalink);
+    return str_replace('%blog_category%', $taxonomy_slug, $permalink);
 }
 
 
@@ -120,12 +120,12 @@ function create_book_taxonomies() {
         'hierarchical' => true,
         'show_admin_column' => true,
         'public' => true,
-        'query_var' => 'blog-category',
+        'query_var' => 'blog_category',
         'rewrite' => array("slug" => "blog/category", 'with_front'=>true),
         '_builtin' => false,
     );
 
-    register_taxonomy('blog-category', array('blog'), $args);
+    register_taxonomy('blog_category', array('blog'), $args);
 
     // Add new taxonomy, NOT hierarchical (like tags)
     $labels = array(
@@ -157,7 +157,7 @@ function create_book_taxonomies() {
         'rewrite' => array('slug' => 'blog-tag'),
     );
 
-    register_taxonomy('blog-tag', 'blog', $args);
+    register_taxonomy('blog_tag', 'blog', $args);
 }
 
 function post_type_slider() {
