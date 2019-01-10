@@ -2,7 +2,10 @@
 import 'jquery';
 
 // Import everything from autoload
-import "./autoload/**/*"
+import "./autoload/**/*";
+
+//Import yarn packages
+import 'slick-carousel/slick/slick.min';
 
 // import local dependencies
 import Router from './util/Router';

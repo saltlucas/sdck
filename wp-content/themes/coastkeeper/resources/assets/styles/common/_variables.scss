@@ -1,8 +1,50 @@
-/** Colors */
+//Row Spacing Margins
+$spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-large: 6rem);
+
+@each $name, $value in $spacing {
+  .margin-top-#{$name} {
+    margin-top: $value !important;
+  }
+
+  .margin-bottom-#{$name} {
+    margin-bottom: $value !important;
+  }
+}
+
+@each $name, $value in $spacing {
+  .margin-#{$name} {
+    margin-bottom: $value !important;
+    margin-top: $value !important;
+  }
+}
+
+@each $name, $value in $spacing {
+  .padding-#{$name} {
+    padding-bottom: $value !important;
+    padding-top: $value !important;
+  }
+}
+
+// Colors
+$black: #303838;
+$gray: #3f3f3f;
+$blue: #006797;
+$blue-highlight: #3fa2f7;
+
+//Foundation Variable Overrides
+$button-background: transparent;
+
 $foundation-palette: (
-  primary: #27ae60,
+  primary: $blue-highlight,
   secondary: #1866ff,
-  success: #3adb76,
+  success: $blue,
   warning: #ffae00,
   alert: #cc4b37,
 );
+
+$button-palette: map-remove(
+  $foundation-palette,
+  ( primary,
+  secondary
+)
+) !default;

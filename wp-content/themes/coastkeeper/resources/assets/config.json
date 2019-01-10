@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/coastkeeper",
+  "publicPath": "/sdck/wp-content/themes/coastkeeper",
   "devUrl": "http://localhost/sdck",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
