@@ -5782,3 +5782,88 @@ Stack trace:
 #4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
 #5 /Applicat in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 191
 [23-Aug-2018 04:54:41 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 155
+[10-Jan-2019 18:50:12 UTC] PHP Parse error:  syntax error, unexpected 'testimonial' (T_STRING), expecting ']' in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 31
+[10-Jan-2019 18:50:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 54
+[10-Jan-2019 18:51:24 UTC] PHP Parse error:  syntax error, unexpected end of file in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 54
+[10-Jan-2019 18:55:49 UTC] PHP Parse error:  syntax error, unexpected end of file in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 54
+[10-Jan-2019 18:57:28 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 53
+[10-Jan-2019 18:57:34 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 53
+[10-Jan-2019 18:57:39 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 53
+[10-Jan-2019 18:58:56 UTC] PHP Parse error:  syntax error, unexpected end of file in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 55
+[10-Jan-2019 18:59:44 UTC] PHP Fatal error:  Uncaught Error: Class 'App\DirectoryIterator' not found in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php:20
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(286): App\{closure}('')
+#1 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /Applications/AMPPS/www/sdck/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php(323): do_action('acf/init')
+#4 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(286): ACF->init('')
+#5 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /Applications/AMPPS/www/sdck/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /Applications/AMPPS/www/sdck/wp-settings.php(467): do_action('init')
+#8 /Applications/AMPPS/www/sdck/wp-config.php(96): require_once('/Applications/A...')
+#9 /Applications/AMPPS/www/sdck/wp-load.php(37): requir in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 20
+[10-Jan-2019 20:36:57 UTC] PHP Fatal error:  Uncaught RuntimeException: Directory name must not be empty. in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php:20
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php(20): DirectoryIterator->__construct('')
+#1 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(286): App\{closure}('')
+#2 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /Applications/AMPPS/www/sdck/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php(323): do_action('acf/init')
+#5 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(286): ACF->init('')
+#6 /Applications/AMPPS/www/sdck/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#7 /Applications/AMPPS/www/sdck/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#8 /Applications/AMPPS/www/sdck/wp-settings.php(467): do_action('init')
+#9 /Applications/AM in /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/app/blocks.php on line 20
+[10-Jan-2019 20:48:39 UTC] PHP Warning:  include_once(/Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-helpers.php): failed to open stream: No such file or directory in /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php on line 125
+[10-Jan-2019 20:48:39 UTC] PHP Warning:  include_once(): Failed opening '/Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-helpers.php' for inclusion (include_path='.:') in /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php on line 125
+[10-Jan-2019 20:48:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_include() in /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php:126
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php(691): ACF->initialize()
+#1 /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php(702): acf()
+#2 /Applications/AMPPS/www/sdck/wp-settings.php(322): include_once('/Applications/A...')
+#3 /Applications/AMPPS/www/sdck/wp-config.php(96): require_once('/Applications/A...')
+#4 /Applications/AMPPS/www/sdck/wp-load.php(37): require_once('/Applications/A...')
+#5 /Applications/AMPPS/www/sdck/wp-admin/admin-ajax.php(22): require_once('/Applications/A...')
+#6 {main}
+  thrown in /Applications/AMPPS/www/sdck/wp-content/plugins/advanced-custom-fields-pro/acf.php on line 126
+[11-Jan-2019 01:02:16 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ':', expecting '(' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:369
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5 /Ap in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 369
+[11-Jan-2019 01:06:10 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 376
+[11-Jan-2019 01:09:19 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 376
+[11-Jan-2019 01:20:14 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 376
+[11-Jan-2019 01:20:15 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 376
+[11-Jan-2019 01:24:41 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:24:52 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:25:00 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:25:02 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:25:44 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:25:45 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:26:23 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:26:24 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:29:57 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:29:58 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:30:31 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:31:55 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 01:32:35 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[11-Jan-2019 23:26:09 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[12-Jan-2019 18:08:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 155
+[12-Jan-2019 18:08:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 347
+[12-Jan-2019 18:08:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 529
+[12-Jan-2019 18:08:56 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[16-Jan-2019 03:18:52 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 155
+[22-Jan-2019 22:36:35 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[22-Jan-2019 22:52:55 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 377
+[22-Jan-2019 23:15:28 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'echo' (T_ECHO) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/660720edc553a0b4be59b7bc865a1617531ffc69.php:25
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(3): Illuminate\View\View->render()
+#5 /Applic in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/660720edc553a0b4be59b7bc865a1617531ffc69.php on line 25

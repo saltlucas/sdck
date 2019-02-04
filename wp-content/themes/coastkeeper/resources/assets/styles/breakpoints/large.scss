@@ -284,13 +284,12 @@
     max-height: calc(100vh - 200px);
   }
 
-  .overlap-section {
-    height: 240px;
+  .overlap-section.background-header {
+    margin-top: -6rem;
   }
 
   .overlap-content {
     padding: 4rem;
-    transform: translateY(-50%);
     position: relative;
     z-index: 1;
   }

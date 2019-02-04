@@ -136,13 +136,15 @@
                   <div class="aspect aspect-5-7">
                     <?php $values = get_sub_field('new_tab');	?>
                     <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('button_link'); ?>" class="category-link">
-                      <div class="background-image">
+                      <div class="background-image blue">
+                        <?php if(get_sub_field('background_image')): ?>
                         <?php
                           $image = get_sub_field('background_image');
                         ?>
                         <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                         sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
                         src="<?php echo $image['url']; ?> ">
+                        <?php endif; ?>
                       </div>
                       <div class="background-content">
                         <div class="grid-x align-middle align-center text-center">
@@ -366,6 +368,30 @@
           <?php endif; ?>
           </div>
         </section>
+      <?php elseif( get_row_layout() == 'annual_report' ): ?>
+        <section class="one-column-section annual-report-single  <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> ">
+          <div class="grid-container">
+            <div class="grid-x">
+              <div class="small-12 large-10 large-offset-1">
+                <?php the_sub_field('content'); ?>
+                <?php $report = get_sub_field('report_link') ?>
+                <div class="report-wrap text-center">
+                  <a target="_blank" class="report-single-link" href="<?php echo $report['url']; ?>">
+                    <?php
+                      $image = get_sub_field('report_image');
+                    ?>
+                    <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+                    sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                    src="<?php echo $image['url']; ?> ">
+                    <p class="report-title"><?php the_sub_field('report_title'); ?></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
 			<?php else:
 				// no layouts found
 			?>

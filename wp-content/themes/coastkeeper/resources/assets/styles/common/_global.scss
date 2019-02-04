@@ -426,6 +426,10 @@ strong {
   .overlap-content {
     padding: 2rem;
   }
+
+  h1 {
+    margin-bottom: 0;
+  }
 }
 
 //Form
@@ -749,6 +753,15 @@ input[type=text] {
   }
 }
 
+.cta-section .background-image::after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($blue, 0.7);
+}
+
 //Staff
 .staff-cell {
   padding: 1rem 2rem;
@@ -757,6 +770,24 @@ input[type=text] {
 
 .staff-title {
   margin-top: 0;
+}
+
+//Annual Report Section
+.report-single-link {
+  display: inline-block;
+  padding-top: 6px;
+  font-weight: bold;
+
+  img {
+    width: 400px;
+    height: auto;
+    box-shadow: 0 0 12px rgb(120, 120, 120);
+  }
+
+  p {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 //footer

@@ -151,6 +151,29 @@ can be used in your pages, posts and widgets.  Insert HTML Snippet is developed 
 		<td><img src="<?php echo plugins_url('images/tick.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
 		</td>
 	</tr>
+	<!-- Snippet Targeting  -->
+	<tr>
+	<td rowspan="3"><h4>Snippet Targeting</h4></td>
+		<td><b>Geographic Targeting</b></td>
+		<td><img src="<?php echo plugins_url('images/cross.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url('images/tick.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+	</tr>
+ 	<tr>
+		<td><b>Device Targeting</b></td>
+		<td><img src="<?php echo plugins_url('images/cross.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url('images/tick.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+	</tr>
+	<tr>
+		<td><b>User Targeting</b></td>
+		<td><img src="<?php echo plugins_url('images/cross.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url('images/tick.png',XYZ_INSERT_HTML_PLUGIN_FILE);?>">
+		</td>
+	</tr>
 
 	<!-- Integration  -->
 

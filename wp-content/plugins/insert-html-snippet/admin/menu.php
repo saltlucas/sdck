@@ -17,6 +17,12 @@ if(isset($_GET['action']) && $_GET['action']=='snippet-delete' ){
 if(isset($_GET['action']) && $_GET['action']=='snippet-edit' ){
 		ob_start();
 }
+if(isset($_GET['page']) && $_GET['page']=='insert-html-snippet-suggest-features' ){
+	ob_start();
+}
+if(isset($_GET['page']) && $_GET['page']=='insert-html-snippet-manage' ){
+	ob_start();
+}
 	add_action('admin_menu', 'xyz_ihs_menu');
 
 
@@ -27,7 +33,7 @@ function xyz_ihs_menu(){
 	add_submenu_page('insert-html-snippet-manage', 'HTML Snippets', 'HTML Snippets', 'manage_options', 'insert-html-snippet-manage','xyz_ihs_snippets');
 	add_submenu_page('insert-html-snippet-manage', 'HTML Snippets - Manage settings', 'Settings', 'manage_options', 'insert-html-snippet-settings' ,'xyz_ihs_settings');	
 	add_submenu_page('insert-html-snippet-manage', 'HTML Snippets - About', 'About', 'manage_options', 'insert-html-snippet-about' ,'xyz_ihs_about');
-	
+	add_submenu_page('insert-html-snippet-manage', 'HTML Snippets - Suggest Feature', 'Suggest a Feature', 'manage_options', 'insert-html-snippet-suggest-features' ,'xyz_ihs_suggest_feature');
 }
 
 function xyz_ihs_snippets(){
@@ -77,6 +83,11 @@ function xyz_ihs_about(){
 	require( dirname( __FILE__ ) . '/footer.php' );
 }
 
+function xyz_ihs_suggest_feature(){
+	require( dirname( __FILE__ ) . '/header.php' );
+	require( dirname( __FILE__ ) . '/suggest_feature.php' );
+	require( dirname( __FILE__ ) . '/footer.php' );
+}
 
 function xyz_ihs_add_style_script(){
 

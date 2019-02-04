@@ -8,9 +8,59 @@ $xyz_ihs_message = '';
 if(isset($_GET['xyz_ihs_msg'])){
 	$xyz_ihs_message = intval($_GET['xyz_ihs_msg']);
 }
-if($xyz_ihs_message == 1){
+if($_POST)
+{
+	if(!isset($_REQUEST['_wpnonce'])||!wp_verify_nonce($_REQUEST['_wpnonce'],'bulk_actions_ihs')){
+		wp_nonce_ays( 'bulk_actions_ihs' );
+		exit;
+	}
+	if (isset($_POST['apply_ihs_bulk_actions'])){
+		if (isset($_POST['ihs_bulk_actions_snippet'])){
+			$ihs_bulk_actions_snippet=$_POST['ihs_bulk_actions_snippet'];
+ 			if (isset($_POST['xyz_ihs_snippet_ids']))
+				$xyz_ihs_snippet_ids = $_POST['xyz_ihs_snippet_ids'];
+ 				$xyz_ihs_pageno = isset( $_GET['pagenum'] ) ? absint( $_GET['pagenum'] ) : 1;
+				
+ 				if (empty($xyz_ihs_snippet_ids))
+ 				{ 
+					header("Location:".admin_url('admin.php?page=insert-html-snippet-manage&xyz_ihs_msg=8&pagenum='.$xyz_ihs_pageno));
+					exit();
+				}
+				if ($ihs_bulk_actions_snippet==2)//bulk-delete
+				{
+					foreach ($xyz_ihs_snippet_ids as $snippet_id)
+					{
+						$wpdb->query($wpdb->prepare( 'DELETE FROM  '.$wpdb->prefix.'xyz_ihs_short_code  WHERE id=%d',$snippet_id)) ;
+					}
+					header("Location:".admin_url('admin.php?page=insert-html-snippet-manage&xyz_ihs_msg=3&pagenum='.$xyz_ihs_pageno));
+					exit();
+				}
+				elseif ($ihs_bulk_actions_snippet==0)//bulk-Deactivate
+				{
+					foreach ($xyz_ihs_snippet_ids as $xyz_ihs_snippetId)
+						$wpdb->update($wpdb->prefix.'xyz_ihs_short_code', array('status'=>2), array('id'=>$xyz_ihs_snippetId));
+						header("Location:".admin_url('admin.php?page=insert-html-snippet-manage&xyz_ihs_msg=4&pagenum='.$xyz_ihs_pageno));
+						exit();
+				}
+				elseif ($ihs_bulk_actions_snippet==1)//bulk-activate
+				{
+					foreach ($xyz_ihs_snippet_ids as $xyz_ihs_snippetId)
+						$wpdb->update($wpdb->prefix.'xyz_ihs_short_code', array('status'=>1), array('id'=>$xyz_ihs_snippetId));
+						header("Location:".admin_url('admin.php?page=insert-html-snippet-manage&xyz_ihs_msg=4&pagenum='.$xyz_ihs_pageno));
+						exit();
+				}
+				elseif ($ihs_bulk_actions_snippet==-1)//no action selected
+				{
+					header("Location:".admin_url('admin.php?page=insert-html-snippet-manage&xyz_ihs_msg=7&pagenum='.$xyz_ihs_pageno));
+					exit();
+				}
+		}
+		
+	}
 
-	?>
+}
+if($xyz_ihs_message == 1){
+?>
 <div class="xyz_system_notice_area_style1" id="xyz_system_notice_area">
 HTML Snippet successfully added.&nbsp;&nbsp;&nbsp;<span
 id="xyz_system_notice_area_dismiss">Dismiss</span>
@@ -56,16 +106,32 @@ HTML Snippet successfully updated.&nbsp;&nbsp;&nbsp;<span
 id="xyz_system_notice_area_dismiss">Dismiss</span>
 </div>
 <?php
-
+}
+if($xyz_ihs_message == 7)
+{
+?>
+ <div class="xyz_system_notice_area_style1" id="xyz_system_notice_area">
+		Please select an action to apply.&nbsp;&nbsp;&nbsp;
+		<span id="xyz_system_notice_area_dismiss">Dismiss</span>
+ </div>
+<?php 
+}
+if($xyz_ihs_message == 8)
+{
+	?>
+	<div class="xyz_system_notice_area_style1" id="xyz_system_notice_area">
+		Please select at least one snippet to perform this action.&nbsp;&nbsp;&nbsp;
+		<span id="xyz_system_notice_area_dismiss">Dismiss</span>
+	</div>
+<?php
 }
 ?>
-
-
 <div >
 
 
 	<form method="post">
-		<fieldset
+		<?php wp_nonce_field( 'bulk_actions_ihs');?>
+ 		<fieldset
 			style="width: 99%; border: 1px solid #F7F7F7; padding: 10px 0px;">
 			<legend><h3>HTML Snippets</h3></legend>
 			<?php 
@@ -80,9 +146,20 @@ id="xyz_system_notice_area_dismiss">Dismiss</span>
 			
 			?>
 			<input  id="xyz_ihs_submit"	style="cursor: pointer; margin-bottom:10px; margin-left:8px;" type="button"	name="textFieldButton2" value="Add New HTML Snippet" onClick='document.location.href="<?php echo admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-add');?>"'>
+			<br>
+<span style="padding-left: 6px;color:#21759B;">With Selected : </span>
+ <select name="ihs_bulk_actions_snippet" id="ihs_bulk_actions_snippet" style="width:130px;height:29px;">
+	<option value="-1">Bulk Actions</option>
+	<option value="0">Deactivate</option>
+	<option value="1">Activate</option>
+	<option value="2">Delete</option>
+</select>
+<input type="submit" title="Apply" name="apply_ihs_bulk_actions" value="Apply" style="color:#21759B;cursor:pointer;padding: 5px;background:linear-gradient(to top, #ECECEC, #F9F9F9) repeat scroll 0 0 #F1F1F1;border: 2px solid #DFDFDF;">
+		
 			<table class="widefat" style="width: 99%; margin: 0 auto; border-bottom:none;">
 				<thead>
 					<tr>
+					<th scope="col" width="3%"><input type="checkbox" id="chkAllSnippets" /></th>
 						<th scope="col" >Tracking Name</th>
 						<th scope="col" >Snippet Short Code</th>
 						<th scope="col" >Status</th>
@@ -96,8 +173,12 @@ id="xyz_system_notice_area_dismiss">Dismiss</span>
 						$class = '';
 						foreach( $entries as $entry ) {
 							$class = ( $count % 2 == 0 ) ? ' class="alternate"' : '';
+							$snippetId=intval($entry->id);
 							?>
 					<tr <?php echo $class; ?>>
+					<td style="vertical-align: middle !important;padding-left: 18px;">
+					<input type="checkbox" class="chk" value="<?php echo $snippetId; ?>" name="xyz_ihs_snippet_ids[]" id="xyz_ihs_snippet_ids" />
+					</td>
 						<td id="xyz_ihs_vAlign"><?php 
 						echo esc_html($entry->title);
 						?></td>
@@ -118,20 +199,20 @@ id="xyz_system_notice_area_dismiss">Dismiss</span>
 						</td>
 						<?php 
 								if($entry->status == 2){
-								$stat1 = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-status&snippetId='.$entry->id.'&status=1&pageno='.$pagenum);
+								$stat1 = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-status&snippetId='.$snippetId.'&status=1&pageno='.$pagenum);
 						?>
 						<td style="text-align: center;"><a
-							href='<?php echo wp_nonce_url($stat1,'ihs-stat_'.$entry->id); ?>'><img
+							href='<?php echo wp_nonce_url($stat1,'ihs-stat_'.$snippetId); ?>'><img
 								id="xyz_ihs_img" title="Activate"
 								src="<?php echo plugins_url('images/activate.png', XYZ_INSERT_HTML_PLUGIN_FILE )?>">
 						</a>
 						</td>
 							<?php 
 								}elseif ($entry->status == 1){
-									$stat2 = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-status&snippetId='.$entry->id.'&status=2&pageno='.$pagenum);
+									$stat2 = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-status&snippetId='.$snippetId.'&status=2&pageno='.$pagenum);
 								?>
 						<td style="text-align: center;"><a
-							href='<?php echo wp_nonce_url($stat2,'ihs-stat_'.$entry->id); ?>'><img
+							href='<?php echo wp_nonce_url($stat2,'ihs-stat_'.$snippetId); ?>'><img
 								id="xyz_ihs_img" title="Deactivate"
 								src="<?php echo plugins_url('images/pause.png',XYZ_INSERT_HTML_PLUGIN_FILE)?>">
 						</a>
@@ -142,15 +223,15 @@ id="xyz_system_notice_area_dismiss">Dismiss</span>
 							?>
 						
 						<td style="text-align: center;"><a
-							href='<?php echo admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-edit&snippetId='.$entry->id.'&pageno='.$pagenum); ?>'><img
+							href='<?php echo admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-edit&snippetId='.$snippetId.'&pageno='.$pagenum); ?>'><img
 								id="xyz_ihs_img" title="Edit Snippet"
 								src="<?php echo plugins_url('images/edit.png',XYZ_INSERT_HTML_PLUGIN_FILE)?>">
 						</a>
 						</td>
 
-						<?php $delurl = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-delete&snippetId='.$entry->id.'&pageno='.$pagenum);?>
+						<?php $delurl = admin_url('admin.php?page=insert-html-snippet-manage&action=snippet-delete&snippetId='.$snippetId.'&pageno='.$pagenum);?>
 						<td style="text-align: center;" ><a
-							href='<?php echo wp_nonce_url($delurl,'ihs-del_'.$entry->id); ?>'
+							href='<?php echo wp_nonce_url($delurl,'ihs-del_'.$snippetId); ?>'
 							onclick="javascript: return confirm('Please click \'OK\' to confirm ');"><img
 								id="xyz_ihs_img" title="Delete Snippet"
 								src="<?php echo plugins_url('images/delete.png',XYZ_INSERT_HTML_PLUGIN_FILE)?>">
@@ -190,3 +271,10 @@ id="xyz_system_notice_area_dismiss">Dismiss</span>
 		</fieldset>
 	</form>
 </div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery("#chkAllSnippets").click(function(){
+		jQuery(".chk").prop("checked",jQuery("#chkAllSnippets").prop("checked"));
+    }); 
+});
+</script>
