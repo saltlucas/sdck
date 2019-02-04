@@ -5867,3 +5867,17 @@ Stack trace:
 #3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
 #4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(3): Illuminate\View\View->render()
 #5 /Applic in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/660720edc553a0b4be59b7bc865a1617531ffc69.php on line 25
+[04-Feb-2019 22:08:36 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'the_sub_field' (T_STRING), expecting '(' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:155
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\Vie in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 155
+[04-Feb-2019 22:33:25 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:166
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3 in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 166

@@ -135,7 +135,8 @@
                 <div class="slide">
                   <div class="aspect aspect-5-7">
                     <?php $values = get_sub_field('new_tab');	?>
-                    <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('button_link'); ?>" class="category-link">
+                    <?php $blank = ""; ?>
+                    <?php if( is_array($values) && in_array("yes", $values )) { $blank = "target='_blank'"; } elseif ('yes' == $values) { $blank = "target='_blank'"; } ?>
                       <div class="background-image blue">
                         <?php if(get_sub_field('background_image')): ?>
                         <?php
@@ -147,16 +148,21 @@
                         <?php endif; ?>
                       </div>
                       <div class="background-content">
+                        <a title="<?php the_sub_field('button_text'); ?>" <?php if($blank != "") { echo $blank; } ?> class="category-link" href="<?php the_sub_field('button_link'); ?>"></a>
                         <div class="grid-x align-middle align-center text-center">
                           <div class="cell small-12">
                             <div class="content-align">
                               <h4><?php the_sub_field('category_title'); ?></h4>
                               <?php the_sub_field('category_content'); ?>
+                              <?php if(get_sub_field('button_text')): ?>
+                                <div class="category-select-button">
+                                  <a <?php if($blank != "") { echo $blank; } ?> title="<?php the_sub_field('button_text'); ?>" href="<?php the_sub_field('button_link'); ?>"><?php the_sub_field('button_text'); ?></a>
+                                </div>
+                              <?php endif; ?>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
                   </div>
                 </div>
               <?php endwhile; ?>
