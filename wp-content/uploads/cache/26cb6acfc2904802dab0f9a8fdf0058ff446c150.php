@@ -1,7 +1,7 @@
 <div class="sticky-container" data-sticky-container>
 <header id="header" class="header sticky" data-sticky data-sticky-on="large" data-margin-top="0" data-btm-anchor="footer:top">
     <div class="nav-button-container hide-for-large">
-        <button type="button" data-toggle="nav-primary" data-toggle="nav-primary" class="nav-button button">
+        <button type="button" data-toggle="nav-primary" data-toggle="nav-primary" class="nav-button">
             <div class="menu-icon"></div>
         </button>
     </div>

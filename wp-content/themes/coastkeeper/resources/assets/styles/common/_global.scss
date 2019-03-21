@@ -58,8 +58,8 @@ section {
 .mega-text {
   font-size: 30px;
   line-height: 40px;
-  font-family: $font-bold;
-  font-weight: $font-weight-bold;
+  font-family: $font-ultra;
+  font-weight: $font-weight-ultra;
   text-transform: uppercase;
 }
 
@@ -68,8 +68,8 @@ a {
 }
 
 strong {
-  font-family: $font-ultra;
-  font-weight: $font-weight-ultra;
+  font-family: $font-bold;
+  font-weight: $font-weight-bold;
 }
 
 //Foundation
@@ -129,7 +129,7 @@ strong {
 }
 
 //Aspect Ratios
-.aspect-3-2 {
+.2 {
   min-height: auto;
   width: 100%;
   position: relative;
@@ -308,7 +308,7 @@ strong {
         color: $blue;
 
         &:hover {
-          color: $blue;
+          color: $blue-highlight;
         }
       }
 
@@ -322,7 +322,7 @@ strong {
         background-color: $blue-highlight;
         border-radius: 4px;
         color: $white;
-        width: 60%;
+        display: inline-block;
         margin-left: 1rem;
       }
 
@@ -331,6 +331,29 @@ strong {
           font-family: $font-regular;
           font-weight: $font-weight-regular;
         }
+      }
+
+      &.is-dropdown-submenu-parent.menu-item-has-children > a {
+        font-family: $font-bold;
+        font-weight: $font-weight-bold;
+      }
+
+      &.is-active > a {
+        color: $blue-highlight;
+      }
+
+      &.current-menu-item > a {
+        color: $blue-highlight;
+      }
+    }
+
+    &.sub-menu {
+      margin-left: 0.5rem;
+
+      &.sub-menu li a {
+        position: relative;
+        font-size: 14px;
+        padding: 0.25rem 0.75rem;
       }
     }
   }
@@ -397,19 +420,35 @@ strong {
   display: block;
 }
 
-.dropdown.menu.vertical > li.opens-right > a::after {
-  content: '';
-  height: 10px;
-  width: 10px;
-  border: none;
-  border-top: 2px solid $blue;
-  border-right: 2px solid $blue;
-  display: inline-block;
-  -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(135deg);
-  top: 33px;
-  right: 1rem;
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
+  display: none;
+}
+
+.dropdown.menu.vertical > li.opens-right {
+  > a::after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    border: none;
+    border-top: 2px solid $blue;
+    border-right: 2px solid $blue;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(135deg);
+    top: 33px;
+    right: 1rem;
+  }
+
+  &.is-active > a::after {
+    border-top: 2px solid $blue-highlight;
+    border-right: 2px solid $blue-highlight;
+  }
+
+  &.current-menu-item > a::after {
+    border-top: 2px solid $blue-highlight;
+    border-right: 2px solid $blue-highlight;
+  }
 }
 
 //Dropdown third level
@@ -548,6 +587,8 @@ input[type=text] {
 
   .slide-title {
     color: $white;
+    font-family: $font-ultra;
+    font-weight: $font-weight-ultra;
   }
 
   .slide-content {
@@ -569,12 +610,6 @@ input[type=text] {
 
 .slick-initialized .slick-slide {
   overflow: hidden;
-}
-
-//Category slider
-.category-slider .slick-list {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 //home
@@ -617,6 +652,10 @@ input[type=text] {
   overflow: hidden;
 }
 
+.cell-background-image {
+  position: relative;
+}
+
 .donate-cell {
   margin-left: -2px;
   position: relative;
@@ -633,13 +672,53 @@ input[type=text] {
   }
 }
 
+.donate-text {
+  color: $blue;
+}
+
 .select-category-section {
   position: relative;
   z-index: 2;
 }
 
 .category-slider {
-  .slide:hover {
+  h4 {
+    color: $white;
+    font-size: 24px;
+  }
+
+  p {
+    color: $white;
+    margin: 0.5rem 0;
+  }
+
+  .category-select-button {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+  }
+
+  .background-content {
+    background-color: rgba(77, 77, 77, 0.8);
+
+    .cell a {
+      font-size: 14px;
+      padding: 0.25rem 1rem;
+      margin-top: 0.5rem;
+      color: $white;
+      border: 1px solid $blue-highlight;
+      display: inline-block;
+      border-radius: 4px;
+    }
+  }
+
+  .slick-list {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .slide:hover,
+  .slick-current {
     position: relative;
     overflow: visible;
 
@@ -650,6 +729,15 @@ input[type=text] {
       top: 0;
       left: 0;
       overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .background-content {
+      background-color: transparent;
+
+      .cell a {
+        background-color: $blue-highlight;
+      }
     }
   }
 }

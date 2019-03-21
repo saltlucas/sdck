@@ -8,6 +8,7 @@ export default {
       }
     });
     //Dropdown Slideout
+    /*
     $(window).on('show.zf.dropdownmenu', function(e) {
       if (Foundation.MediaQuery.atLeast('large')) {
         var i = 0;
@@ -25,6 +26,7 @@ export default {
         $(e.target).find('.submenu').css( 'height', '0');
       }
     });
+    */
 
     //Toggle off canvas search
     $('.menu-item.search-icon').on('click', function (e) {
@@ -41,11 +43,17 @@ export default {
     $('.full-screen-slider').slick();
 
     //launch category slider
+    let count = parseInt($('.category-slider').data('slide-count'));
+    if(count > 5) {
+      count = 5;
+    }
+
     $('.category-slider').slick({
-      slidesToShow: 6,
+      slidesToShow: count,
       slidesToScroll: 1,
       autoplay: false,
       autoplaySpeed: 2000,
+      centerMode: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -57,7 +65,7 @@ export default {
         {
           breakpoint: 640,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
           }
         }

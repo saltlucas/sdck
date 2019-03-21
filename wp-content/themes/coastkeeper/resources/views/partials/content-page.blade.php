@@ -24,7 +24,7 @@
                 </div>
           	    <div id="hero-content" class="background-content va-container" role="main">
                   	<div class="grid-x align-middle">
-                  		<div class="cell small-12 medium-8 large-5 text-center text-white blue content-cell">
+                  		<div class="cell small-12 medium-8 large-5 text-white blue content-cell">
         				          <div class="slide-content">
                             <h2 class="slide-title"><?php the_sub_field('slide_title'); ?></h2>
                             <?php the_sub_field('slide_content'); ?>
@@ -70,7 +70,7 @@
         </section>
       <?php elseif( get_row_layout() == 'one_column' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="one-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?>
-          <?php if(get_sub_field('background_color') != 'white') { echo 'text-white'; } ?>">
+          <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -83,14 +83,14 @@
           <?php endif; ?>
           <div class="grid-container">
             <div class="grid-x">
-              <div class="small-12 large-10 large-offset-1">
+              <div class="small-12">
                 <?php the_sub_field('content'); ?>
               </div>
             </div>
           </div>
 				</section>
       <?php elseif( get_row_layout() == 'two_columns' ): ?>
-				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="two-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="two-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -103,9 +103,9 @@
           <?php endif; ?>
           <div class="grid-container">
             <?php if(get_sub_field('column')): ?>
-              <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x grid-padding-x <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+              <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x grid-padding-x <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> ">
               <?php while (have_rows('column')) : the_row(); ?>
-                <div class="cell small-12 medium-6">
+                <div class="cell small-12 medium-6 @if(get_sub_field('background_image')) cell-background-image @endif">
                   <?php if(get_sub_field('background_image')): ?>
                   <div class="background-image">
                     <?php
@@ -126,13 +126,13 @@
           </div>
 				</section>
       <?php elseif( get_row_layout() == 'select_category' ): ?>
-				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="select-category-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="select-category-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php
           $count = count(get_sub_field('category'));
           if( have_rows('category') ):  ?>
             <div class="category-slider slider" data-slide-count="<?php echo $count; ?>">
               <?php while ( have_rows('category') ) : the_row(); ?>
-                <div class="slide">
+                <div class="slide clearfix">
                   <div class="aspect aspect-5-7">
                     <?php $values = get_sub_field('new_tab');	?>
                     <?php $blank = ""; ?>
@@ -176,7 +176,7 @@
 				</section>
       <?php elseif( get_row_layout() == 'tabs' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="tab-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?>
-          <?php if(get_sub_field('background_color') != 'white') { echo 'text-white';} ?>">
+          <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -202,7 +202,7 @@
           <?php endif; ?>
           <?php if( have_rows('tab_content_holder') ):  ?>
             <?php while ( have_rows('tab_content_holder') ) : the_row(); ?>
-              <div class="tabs-content <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>" data-tabs-content="section-tabs">
+              <div class="tabs-content <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>" data-tabs-content="section-tabs">
                 <?php if( have_rows('tab_content') ):  ?>
                 <?php $i = 1; ?>
                 <?php while ( have_rows('tab_content') ) : the_row(); ?>
@@ -232,7 +232,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'square_grid' ): ?>
-				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -248,7 +248,7 @@
             <div id="squares" class="grid-x squares grid-margin-x grid-margin-y large-up-2">
               <?php $n = 1; ?>
               <?php while ( have_rows('square') ) : the_row(); ?>
-                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
@@ -279,7 +279,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'three_square_grid' ): ?>
-				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -295,7 +295,7 @@
             <div id="squares" class="grid-x squares grid-margin-x grid-margin-y medium-up-2 large-up-3">
               <?php $n = 1; ?>
               <?php while ( have_rows('square') ) : the_row(); ?>
-                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
@@ -325,8 +325,73 @@
           <?php endif; ?>
           </div>
         </section>
+      <?php elseif( get_row_layout() == 'accomplishments_grid' ): ?>
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid accomplishment_grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
+          <?php if(get_sub_field('background_image')): ?>
+          <div class="background-image">
+            <?php
+              $image = get_sub_field('background_image');
+            ?>
+            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+            src="<?php echo $image['url']; ?> ">
+          </div>
+          <?php endif; ?>
+          <div class="grid-container">
+            <div id="squares" class="grid-x squares grid-margin-x grid-margin-y medium-up-2 large-up-3">
+              <?php $n = 1;
+              $child_repeater = get_sub_field('accomplishment');
+              foreach($child_repeater as $item):
+                $background_color = $item['background_color'];
+                $background_image = $item['background_image'];
+                $accomplishment_title = $item['accomplishment_title'];
+
+              ?>
+                <div class="cell square <?php echo $background_color ?> <?php if($background_color != 'white' && $background_color != null ) { echo 'text-white'; } ?>">
+                  <a data-open="accomplishmentModal-<?php echo strval($n); ?>">
+                    <div class="aspect-1-1">
+                      <?php if($background_image): ?>
+                        <div class="background-image">
+                          <?php
+                            $image = $background_image;
+                          ?>
+                          <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+                          sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                          src="<?php echo $image['url']; ?> ">
+                        </div>
+                      <?php endif; ?>
+                      <div class="background-content va-container" role="main">
+                      	<div class="grid-x align-middle">
+                      		<div class="cell content-cell text-center">
+                            <h5><?php echo $accomplishment_title; ?></h5>
+                          </div>
+                        </div>
+                			</div>
+                    </div>
+                  </a>
+                </div>
+                <?php $n++; ?>
+              <?php endforeach;
+              ?>
+            </div>
+          <?php
+          ?>
+        </div>
+            <?php $k = 1;
+            foreach($child_repeater as $item):
+              $accomplishment_title = $item['accomplishment_title'];
+              $content= $item['content'];
+
+              ?>
+              <div id="accomplishmentModal-<?php echo strval($k); ?>" class="reveal" data-reveal>
+                <h3><?php echo $accomplishment_title; ?></h3>
+                <?php echo $content; ?>
+              </div>
+              <?php $k++; ?>
+          <?php endforeach; ?>
+        </section>
       <?php elseif( get_row_layout() == 'staff' ): ?>
-				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white staff <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white staff <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
           <?php if(get_sub_field('background_image')): ?>
           <div class="background-image">
             <?php
@@ -342,7 +407,7 @@
             <div id="squares" class="grid-x squares grid-margin-x grid-margin-y medium-up-2 large-up-3">
               <?php $n = 1; ?>
               <?php while ( have_rows('square') ) : the_row(); ?>
-                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
@@ -397,6 +462,34 @@
           </div>
         </section>
 
+      <?php elseif( get_row_layout() == 'sponsors' ): ?>
+			<section id="sponsors">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+          <?php
+          if( have_rows('sponsor') ):
+              while ( have_rows('sponsor') ) : the_row(); ?>
+              <div class="cell sponsor-cell">
+                @if(get_sub_field('sponsor_image'))
+                  @if(get_sub_field('sponsor_link'))
+                    <a style="display:block;" href="@php the_sub_field('sponsor_link'); @endphp" title="@php the_sub_field('sponsor_title'); @endphp">
+                  @endif
+                      <img class="sponsor-image" src="@php the_sub_field('sponsor_image'); @endphp" alt="@php the_sub_field('sponsor_title'); @endphp">
+                  @if(get_sub_field('sponsor_link'))
+                    </a>
+                  @endif
+                @else
+                  <h4 class="sponsor-title">@php the_sub_field('sponsor_title'); @endphp</h4>
+                @endif
+              </div>
+              <?php endwhile;
+          else :
+
+          endif;
+          ?>
+          </div>
+        </div>
+      </section>
 
 			<?php else:
 				// no layouts found

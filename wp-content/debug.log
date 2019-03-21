@@ -5881,3 +5881,170 @@ Stack trace:
 #2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
 #3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
 #4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3 in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 166
+[06-Feb-2019 17:05:36 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 155
+[06-Feb-2019 17:55:45 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 347
+[06-Feb-2019 17:56:05 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Applications/AMPPS/www/sdck/wp-includes/update.php on line 529
+[06-Feb-2019 19:28:25 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/Applications/AMPPS/var/mysql.sock' (2) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1531
+[06-Feb-2019 19:28:30 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/Applications/AMPPS/var/mysql.sock' (2) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1531
+[07-Feb-2019 03:10:32 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'if' (T_IF) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:106
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5 /Applicati in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 106
+[07-Feb-2019 03:13:35 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'if' (T_IF) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:129
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5 /Applicati in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 129
+[07-Feb-2019 03:14:00 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 73
+[07-Feb-2019 03:18:43 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '!=' (T_IS_NOT_EQUAL) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:129
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5  in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 129
+[07-Feb-2019 03:19:12 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '!=' (T_IS_NOT_EQUAL) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:106
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5  in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 106
+[07-Feb-2019 03:20:33 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '{' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:73
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5 /Applications/AMPPS in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 73
+[08-Feb-2019 19:46:41 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:41 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:41 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:43 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:45 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:46 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:46 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:49 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:49 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:51 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:51 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:52 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:55 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:56 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:57 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:58 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:59 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:59 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:46:59 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:00 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:09 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:10 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:29 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 19:47:29 UTC] PHP Warning:  mysqli_query(): (HY000/5): Out of memory (Needed 33717320 bytes) in /Applications/AMPPS/www/sdck/wp-includes/wp-db.php on line 1924
+[08-Feb-2019 21:24:32 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 385
+[12-Mar-2019 21:09:26 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ';', expecting ',' or ')' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:406
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render() in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 406
+[12-Mar-2019 21:12:59 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ';', expecting ',' or ')' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:406
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render() in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 406
+[12-Mar-2019 21:29:44 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '" alt="' (T_CONSTANT_ENCAPSED_STRING) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:413
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\V in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 413
+[12-Mar-2019 21:30:19 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '<' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php:418
+Stack trace:
+#0 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Applications/A...', Array)
+#1 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/Applications/A...', Array)
+#2 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#3 /Applications/AMPPS/www/sdck/wp-content/themes/coastkeeper/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#4 /Applications/AMPPS/www/sdck/wp-content/uploads/cache/d76a91678be0efd3fd6331da084c66c51ee0aec2.php(4): Illuminate\View\View->render()
+#5 /Applications/AMPP in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 418
+[12-Mar-2019 23:49:26 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 385
+[13-Mar-2019 03:20:54 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 385
+[13-Mar-2019 18:51:22 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 18:51:22 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 18:52:02 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 18:52:02 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 18:52:33 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 18:52:33 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 18:55:04 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 18:55:04 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 18:55:40 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 18:55:40 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:02:27 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 19:02:27 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:02:57 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 19:02:57 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:06:53 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 255819776 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 19:06:53 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 255807488 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:08:04 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 19:08:04 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:09:08 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 362
+[13-Mar-2019 19:09:08 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:10:10 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 362
+[13-Mar-2019 19:10:10 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:13:50 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 362
+[13-Mar-2019 19:13:50 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:15:16 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 362
+[13-Mar-2019 19:15:16 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:26:03 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 255819776 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 359
+[13-Mar-2019 19:26:03 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 255807488 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:37:10 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257916928 bytes) in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 362
+[13-Mar-2019 19:37:10 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 257904640 bytes) in /Applications/AMPPS/www/sdck/wp-includes/functions.php on line 3813
+[13-Mar-2019 19:53:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 344
+[13-Mar-2019 19:53:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 381
+[13-Mar-2019 20:29:52 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 450
+[13-Mar-2019 21:23:11 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 450
+[13-Mar-2019 21:28:57 UTC] PHP Warning:  Illegal string offset 'url' in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 450
