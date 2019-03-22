@@ -19037,8 +19037,6 @@ strong {
   left: 50%;
   width: auto;
   height: auto;
-  max-height: none;
-  max-width: none;
   min-height: 100%;
   min-width: 100%;
   -o-transform: translate(-50%, -50%);
@@ -19113,6 +19111,14 @@ strong {
   position: relative;
   height: 0;
   padding: 140% 0 0;
+}
+
+.aspect-7-5 {
+  min-height: auto;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 71.429% 0 0;
 }
 
 .nav-button-container {
@@ -20311,6 +20317,7 @@ body#tinymce {
   .full-screen-slider {
     height: calc(100vh - 276px);
     min-height: 400px;
+    padding-left: 8rem;
   }
 
   .full-screen-slider .slide {
@@ -20344,8 +20351,8 @@ body#tinymce {
   }
 
   .page-header .one-column-section {
-    min-height: 100%;
     max-height: calc(100vh - 200px);
+    min-height: 480px;
   }
 
   .page-header .overlap-section.background-header {

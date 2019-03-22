@@ -92,8 +92,6 @@ strong {
     left: 50%;
     width: auto;
     height: auto;
-    max-height: none;
-    max-width: none;
     min-height: 100%;
     min-width: 100%;
     transform: translate(-50%, -50%);
@@ -171,6 +169,14 @@ strong {
   position: relative;
   height: 0;
   padding: 140% 0 0;
+}
+
+.aspect-7-5 {
+  min-height: auto;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 71.429% 0 0;
 }
 
 // Header

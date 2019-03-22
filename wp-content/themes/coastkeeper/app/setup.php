@@ -52,9 +52,9 @@ add_action('after_setup_theme', function () {
     /**
      * Image Sizes
      */
-    add_image_size( 'small', 640, 640 );
-
-
+    add_image_size( 'small', 640, 640, true );
+    add_image_size('category-5x7', 400, 560, true);
+    add_image_size('hero', 1800, null, true);
 
     /**
      * Enable HTML5 markup support

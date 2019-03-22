@@ -16,9 +16,9 @@
           		<div class="slide">
           			<div class="background-image">
                   <?php
-                    $image = get_sub_field('background_image');
+                    $image = get_sub_field('background_image_hero');
                   ?>
-                  <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+                  <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
                   sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
                   src="<?php echo $image['url']; ?> ">
                 </div>
@@ -71,12 +71,12 @@
       <?php elseif( get_row_layout() == 'one_column' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="one-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?>
           <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
-            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
             src="<?php echo $image['url']; ?> ">
           </div>
@@ -91,30 +91,32 @@
 				</section>
       <?php elseif( get_row_layout() == 'two_columns' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="two-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
-          <div class="background-image">
-            <?php
-              $image = get_sub_field('background_image');
-            ?>
-            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-            src="<?php echo $image['url']; ?> ">
-          </div>
+          <?php if(get_sub_field('background_image_hero')): ?>
+            <div class="background-image">
+              <?php
+                $image = get_sub_field('background_image_hero');
+              ?>
+              <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+              sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+              src="<?php echo $image['url']; ?> ">
+            </div>
           <?php endif; ?>
           <div class="grid-container">
             <?php if(get_sub_field('column')): ?>
               <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x grid-padding-x <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> ">
               <?php while (have_rows('column')) : the_row(); ?>
                 <div class="cell small-12 medium-6 @if(get_sub_field('background_image')) cell-background-image @endif">
-                  <?php if(get_sub_field('background_image')): ?>
-                  <div class="background-image">
-                    <?php
-                      $image = get_sub_field('background_image');
-                    ?>
-                    <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-                    sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-                    src="<?php echo $image['url']; ?> ">
-                  </div>
+                  <?php if(get_sub_field('background_image_7x5')): ?>
+                    <div class="aspect aspect-7-5">
+                      <div class="background-image">
+                        <?php
+                          $image = get_sub_field('background_image_7x5');
+                        ?>
+                        <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+                        sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                        src="<?php echo $image['url']; ?> ">
+                      </div>
+                    </div>
                   <?php endif; ?>
                   <div class="column-content">
                     <?php the_sub_field('content'); ?>
@@ -138,13 +140,11 @@
                     <?php $blank = ""; ?>
                     <?php if( is_array($values) && in_array("yes", $values )) { $blank = "target='_blank'"; } elseif ('yes' == $values) { $blank = "target='_blank'"; } ?>
                       <div class="background-image blue">
-                        <?php if(get_sub_field('background_image')): ?>
+                        <?php if(get_sub_field('background_image_5x7')): ?>
                         <?php
-                          $image = get_sub_field('background_image');
+                          $image = get_sub_field('background_image_5x7');
                         ?>
-                        <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-                        sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-                        src="<?php echo $image['url']; ?> ">
+                        <img src="<?php echo $image['sizes'][ 'category-5x7' ]; ?>">
                         <?php endif; ?>
                       </div>
                       <div class="background-content">
@@ -177,10 +177,10 @@
       <?php elseif( get_row_layout() == 'tabs' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="tab-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?>
           <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
             <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -207,10 +207,10 @@
                 <?php $i = 1; ?>
                 <?php while ( have_rows('tab_content') ) : the_row(); ?>
                   <div class="tabs-panel <?php if($i==1) {echo "is-active";}?>" id="panel<?php echo (string)$i; ?>">
-                    <?php if(get_sub_field('background_image')): ?>
+                    <?php if(get_sub_field('background_image_hero')): ?>
                     <div class="background-image">
                       <?php
-                        $image = get_sub_field('background_image');
+                        $image = get_sub_field('background_image_hero');
                       ?>
                       <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                       sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -233,10 +233,10 @@
         </section>
       <?php elseif( get_row_layout() == 'square_grid' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
             <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -252,10 +252,10 @@
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
-                      <?php if(get_sub_field('background_image')): ?>
+                      <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
                           <?php
-                            $image = get_sub_field('background_image');
+                            $image = get_sub_field('background_image_sqare');
                           ?>
                           <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                           sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -280,10 +280,10 @@
         </section>
       <?php elseif( get_row_layout() == 'three_square_grid' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
             <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -299,10 +299,10 @@
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
-                      <?php if(get_sub_field('background_image')): ?>
+                      <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
                           <?php
-                            $image = get_sub_field('background_image');
+                            $image = get_sub_field('background_image_square');
                           ?>
                           <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                           sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -327,10 +327,10 @@
         </section>
       <?php elseif( get_row_layout() == 'accomplishments_grid' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid accomplishment_grid text-white <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
             <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -343,7 +343,7 @@
               $child_repeater = get_sub_field('accomplishment');
               foreach($child_repeater as $item):
                 $background_color = $item['background_color'];
-                $background_image = $item['background_image'];
+                $background_image = $item['background_image_square'];
                 $accomplishment_title = $item['accomplishment_title'];
 
               ?>
@@ -392,14 +392,12 @@
         </section>
       <?php elseif( get_row_layout() == 'staff' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="three-square-grid square-grid text-white staff <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
-          <?php if(get_sub_field('background_image')): ?>
+          <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
-              $image = get_sub_field('background_image');
+              $image = get_sub_field('background_image_hero');
             ?>
-            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-            src="<?php echo $image['url']; ?> ">
+            <img src="<?php echo $image['url']; ?> ">
           </div>
           <?php endif; ?>
           <div class="grid-container">
@@ -411,10 +409,10 @@
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                     <div class="aspect-1-1">
-                      <?php if(get_sub_field('background_image')): ?>
+                      <?php if(get_sub_field('background_image_staff')): ?>
                         <div class="background-image">
                           <?php
-                            $image = get_sub_field('background_image');
+                            $image = get_sub_field('background_image_staff');
                           ?>
                           <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                           sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
