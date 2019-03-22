@@ -18,28 +18,17 @@
   <section class="footer-utilities margin-top-large margin-bottom-large">
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
-        <div class="cell small-12 medium-6 large-3">
-          <h4>Find</h4>
-          <ul>
-            <li>Connect with Us</li>
-            <li>Volunteer Programs</li>
-            <li>Report Pollution & Water Waste</li>
-          <ul>
+        <div class="cell small-12 medium-6 large-4">
+          <h4>Join</h4>
+          @if (has_nav_menu('footer_1'))
+              {!! wp_nav_menu(['theme_location' => 'footer_1', 'menu_class' => 'nav vertical menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
+          @endif
         </div>
-        <div class="cell small-12 medium-6 large-3">
-          <h4>Fix</h4>
-          <ul>
-            <li>Speak for Your Community</li>
-            <li>Attend an Event (Calendar)Environmental</li>
-            <li>Law & Policy ClinicChange Your Habits</li>
-          </ul>
-        </div>
-        <div class="cell small-12 medium-6 large-3">
+        <div class="cell small-12 medium-6 large-4">
           <h4>Get Involved</h4>
-          <ul>
-            <li>Volunteer</li>
-            <li>Connect with us</li>
-          </ul>
+          @if (has_nav_menu('footer_2'))
+              {!! wp_nav_menu(['theme_location' => 'footer_2', 'menu_class' => 'nav vertical menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
+          @endif
         </div>
         <div class="cell small-12 medium-6 large-3">
           <h4>Follow Us</h4>
