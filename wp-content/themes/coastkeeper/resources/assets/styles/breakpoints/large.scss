@@ -309,7 +309,6 @@
 .full-screen-slider {
   height: calc(100vh - 276px);
   min-height: 400px;
-  padding-left: 8rem;
 
   .slide {
     height: calc(100vh - 276px);
@@ -337,7 +336,7 @@
   }
 
   .slide-content {
-    padding-left: 2rem;
+    padding-left: 8rem;
     padding-right: 2rem;
   }
 }

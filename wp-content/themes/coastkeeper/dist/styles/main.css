@@ -20317,7 +20317,6 @@ body#tinymce {
   .full-screen-slider {
     height: calc(100vh - 276px);
     min-height: 400px;
-    padding-left: 8rem;
   }
 
   .full-screen-slider .slide {
@@ -20346,7 +20345,7 @@ body#tinymce {
   }
 
   .full-screen-slider .slide-content {
-    padding-left: 2rem;
+    padding-left: 8rem;
     padding-right: 2rem;
   }
 
