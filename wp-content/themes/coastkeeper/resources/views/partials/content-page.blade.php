@@ -28,9 +28,9 @@
         				          <div class="slide-content">
                             <h2 class="slide-title"><?php the_sub_field('slide_title'); ?></h2>
                             <?php the_sub_field('slide_content'); ?>
-                            <div id="footer-cta-row">
+                            <div class="slide-button-wrap">
                                 <?php $values = get_sub_field('new_tab');	?>
-                                <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('button_link'); ?>" class="button blue-highlight"><?php the_sub_field('button_text'); ?> </a>
+                                <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('button_link'); ?>" class="button blue-highlight slide-button"><?php the_sub_field('button_text'); ?> </a>
                            </div>
                          </div>
                       </div>
@@ -52,19 +52,26 @@
               <div class="donate-text"><?php the_sub_field('donate_information'); ?></div>
             </div>
             <div class="cell small-12 medium-5">
-              <form method="get">
-                <label for="amout">Quick Donate</label>
-                <div class="grid-x">
-                  <div class="cell small-8">
-                    <div class="input-currency">
-                      <input id="amount" type="text" name="amount" placeholder="50">
-                    </div>
-                  </div>
-                  <div class="cell small-4 donate-cell">
-                    <input type="submit" class="button blue-highlight" value="Submit">
-                  </div>
-                </div>
-              </form>
+              <div class="giving-box">
+                <ul class="toggle-giving horizontal-ul">
+                  <li data-toggle-id="one-time" class="button active">Donate Once</li>
+                  <li data-toggle-id="monthly" class="button">Monthly</li>
+                </ul>
+                <ul id="one-time" class="one-time donate-amounts horizontal-ul visible">
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=1000" target="_blank" class="button donate-amount">$1,000</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=500" target="_blank" class="button donate-amount">$500</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=200" target="_blank" class="button donate-amount">$200</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=50" target="_blank" class="button donate-amount">$50</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout" target="_blank" class="button donate-amount">Other</a></li>
+                </ul>
+                <ul id="monthly" class="monthly donate-amounts horizontal-ul">
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=1000&recurring=1" target="_blank" class="button donate-amount">$1,000</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=500&recurring=1" target="_blank" class="button donate-amount">$500</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=200&recurring=1" target="_blank" class="button donate-amount">$200</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=50&recurring=1" target="_blank" class="button donate-amount">$50</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout&recurring=1" target="_blank" class="button donate-amount">Other</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

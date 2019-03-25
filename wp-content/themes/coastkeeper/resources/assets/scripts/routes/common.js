@@ -34,6 +34,12 @@ export default {
       $('#off-canvas-search').foundation('toggle');
     });
 
+    //Toggle Donate Options
+    $('.toggle-giving li').on('click', function (e) {
+      e.preventDefault();
+      $('.toggle-giving li').toggleClass('active');
+      $('.donate-amounts').toggleClass('visible');
+    });
 
   },
   finalize() {

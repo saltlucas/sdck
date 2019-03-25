@@ -3,6 +3,7 @@
   border-radius: 4px;
   font-weight: $font-weight-bold;
   background-color: $blue;
+  text-transform: uppercase;
 
   &:hover {
     background-color: darken($blue-highlight, 20%);
@@ -11,6 +12,11 @@
   &.blue-highlight {
     background-color: $blue-highlight;
   }
+}
+
+.button:focus {
+  outline: none;
+  background-color: $blue-highlight;
 }
 
 .button.outline {
