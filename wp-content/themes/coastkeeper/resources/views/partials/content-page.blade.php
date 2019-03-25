@@ -69,7 +69,7 @@
                   <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=500&recurring=1" target="_blank" class="button donate-amount">$500</a></li>
                   <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=200&recurring=1" target="_blank" class="button donate-amount">$200</a></li>
                   <li><a href="https://www.classy.org/give/167764/#!/donation/checkout?amount=50&recurring=1" target="_blank" class="button donate-amount">$50</a></li>
-                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout&recurring=1" target="_blank" class="button donate-amount">Other</a></li>
+                  <li><a href="https://www.classy.org/give/167764/#!/donation/checkout" target="_blank" class="button donate-amount">Other</a></li>
                 </ul>
               </div>
             </div>
@@ -146,7 +146,7 @@
                     <?php $values = get_sub_field('new_tab');	?>
                     <?php $blank = ""; ?>
                     <?php if( is_array($values) && in_array("yes", $values )) { $blank = "target='_blank'"; } elseif ('yes' == $values) { $blank = "target='_blank'"; } ?>
-                      <div class="background-image blue">
+                      <div class="background-image @if(!get_sub_field('background_image_5x7')) echo 'blue' @endif">
                         <?php if(get_sub_field('background_image_5x7')): ?>
                         <?php
                           $image = get_sub_field('background_image_5x7');

@@ -68,12 +68,14 @@
 
 .menu-item.search-icon {
   text-indent: -99px;
-  margin-left: 10px;
+  margin-left: 0;
   overflow: hidden;
   background: url(../images/search-icon.svg) 0 0 no-repeat;
 
   a {
     line-height: 26px !important;
+    padding: 0 !important;
+    width: 26px;
   }
 }
 
@@ -81,6 +83,7 @@
 #nav-primary {
   position: absolute;
   width: 100%;
+  transition: none;
 
   .menu {
     position: static;
@@ -95,6 +98,11 @@
     position: static;
   }
 
+  .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a {
+    padding: 0 1.5rem 0 0;
+    margin-right: 2rem;
+  }
+
   ul {
     li {
       &.menu-item.menu-button {
@@ -105,6 +113,7 @@
           width: 100%;
           line-height: 48px;
           padding-top: 0;
+          padding-bottom: 0;
           margin-left: 0;
         }
       }
@@ -113,6 +122,12 @@
 
   &.off-canvas {
     background-color: transparent;
+    height: auto;
+    transition: none;
+
+    &.is-closed {
+      width: 100%;
+    }
   }
 
   ul.menu > li > .is-dropdown-submenu {
@@ -133,7 +148,6 @@
       transition: height 0.5s;
       padding-top: 1rem;
       overflow-y: scroll;
-      //height: 50vh;
       height: 400px;
     }
 
@@ -365,7 +379,7 @@
   padding-bottom: 3rem;
 
   &.grid-container {
-    max-width: 50rem;
+    max-width: 56rem;
   }
 
   .input-currency {

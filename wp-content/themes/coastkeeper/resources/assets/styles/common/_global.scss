@@ -298,6 +298,7 @@ strong {
 
 #nav-primary {
   color: $blue;
+  transition: none;
 
   ul {
     &:first-child {
@@ -359,59 +360,62 @@ strong {
       &.sub-menu li a {
         position: relative;
         font-size: 14px;
-        padding: 0.25rem 0.75rem;
+        padding: 0.75rem 0.75rem;
       }
     }
   }
 
   &.off-canvas {
     background-color: $white;
+    transition: 1s;
+    width: 0;
+    height: 100vh;
 
-    &.is-open {
-      width: 100%;
-      height: 100vh;
+    ul {
+      li {
+        a {
+          padding: 0.7rem 1rem;
+        }
 
-      ul {
-        li {
+        &.menu-button {
+          margin-top: 0;
+          margin-left: 0;
+
           a {
             padding: 0.7rem 1rem;
           }
-
-          &.menu-button {
-            margin-top: 0;
-            margin-left: 0;
-
-            a {
-              padding: 0.7rem 1rem;
-            }
-          }
         }
       }
+    }
 
-      .social-links {
-        li {
-          display: inline-block;
+    .social-links {
+      li {
+        display: inline-block;
 
-          img {
-            padding: 1rem;
-            width: 30px;
-            box-sizing: content-box;
-          }
+        img {
+          padding: 1rem;
+          width: 30px;
+          box-sizing: content-box;
         }
       }
+    }
 
-      .is-dropdown-submenu {
-        background-color: transparent;
-        border: none;
-      }
+    .is-dropdown-submenu {
+      background-color: transparent;
+      border: none;
+    }
 
-      .search-icon {
-        circle,
-        path,
-        rect {
-          stroke: $white;
-        }
+    .search-icon {
+      circle,
+      path,
+      rect {
+        stroke: $white;
       }
+    }
+
+    &.is-open {
+      width: 100%;
+      overflow-x: hidden;
     }
   }
 
@@ -737,6 +741,18 @@ input[type=text] {
   justify-content: space-between;
 
   li {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 2px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
     a {
       margin-bottom: 0;
       flex-basis: 0;
@@ -806,6 +822,7 @@ input[type=text] {
   .slick-current {
     position: relative;
     overflow: visible;
+    z-index: 10;
 
     .aspect {
       transform: scale(1.1);
@@ -824,6 +841,10 @@ input[type=text] {
         background-color: $blue-highlight;
       }
     }
+  }
+
+  .slide:hover {
+    z-index: 11;
   }
 }
 
