@@ -691,11 +691,13 @@ input[type=text] {
   h4 {
     color: $white;
     font-size: 24px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   }
 
   p {
     color: $white;
     margin: 0.5rem 0;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   }
 
   .category-select-button {
@@ -892,4 +894,8 @@ input[type=text] {
   .h2 {
     margin-bottom: 0;
   }
+}
+
+.footer-menu li a {
+  padding-left: 0;
 }

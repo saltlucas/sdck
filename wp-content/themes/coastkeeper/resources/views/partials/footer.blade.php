@@ -21,13 +21,13 @@
         <div class="cell small-12 medium-6 large-4">
           <h4>Join</h4>
           @if (has_nav_menu('footer_1'))
-              {!! wp_nav_menu(['theme_location' => 'footer_1', 'menu_class' => 'nav vertical menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
+              {!! wp_nav_menu(['theme_location' => 'footer_1', 'menu_class' => 'nav vertical menu footer-menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
           @endif
         </div>
         <div class="cell small-12 medium-6 large-4">
           <h4>Get Involved</h4>
           @if (has_nav_menu('footer_2'))
-              {!! wp_nav_menu(['theme_location' => 'footer_2', 'menu_class' => 'nav vertical menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
+              {!! wp_nav_menu(['theme_location' => 'footer_2', 'menu_class' => 'nav vertical menu footer-menu', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>']) !!}
           @endif
         </div>
         <div class="cell small-12 medium-6 large-3">
