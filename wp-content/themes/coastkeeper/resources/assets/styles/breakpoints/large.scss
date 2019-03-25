@@ -123,6 +123,7 @@
   &.off-canvas {
     background-color: transparent;
     height: auto;
+    width: 100%;
     transition: none;
 
     &.is-closed {
