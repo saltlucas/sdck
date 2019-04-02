@@ -2,6 +2,9 @@
   $small = '640w';
   $large = '1300w';
   // override $post
+  global $post;
+  $post = $post_object;
+  setup_postdata( $post);
 ?>
 <div class="page-header blog-hero-header">
 <?php if(has_post_thumbnail($id)): ?>
@@ -19,11 +22,11 @@
     </div>
   </section>
 <?php endif; ?>
-  <section class="overlap-section grid-container <?php if(has_post_thumbnail($id)) { echo "background-header"; } else { echo "text-header"; } ?>">
+  <section class="overlap-section grid-container <?php if(has_post_thumbnail($id)) { echo "background-header"; } ?>">
     <div class="overlap-content text-white">
         <div class="grid-x">
           <div class="cell small-12 medium-8 large-9">
-            <h1 class="title hero-title"><span><?php the_title(); ?></span></h1>
+            <h2 class="title"><a class="hero-title-a" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           </div>
           <div class="cell small-12 medium-4 large-3 article-meta text-center">
             <div class="meta-wrap text-blue">
@@ -46,12 +49,6 @@
     </div>
   </section>
 </div>
-<article @php(post_class())>
-  <div class="entry-content">
-    @php(the_content())
-  </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php(comments_template('/partials/comments.blade.php'))
-</article>
+<?php
+  wp_reset_postdata();
+?>

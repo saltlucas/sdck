@@ -78,15 +78,18 @@
       <?php elseif( get_row_layout() == 'one_column' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="one-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?>
           <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
+          @if(get_sub_field('background_image_aspect_ratio') == '3x1')
+            <div class="aspect aspect-3-1">
+          @endif
           <?php if(get_sub_field('background_image_hero')): ?>
-          <div class="background-image">
+            <div class="background-image">
             <?php
               $image = get_sub_field('background_image_hero');
             ?>
             <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
             sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
             src="<?php echo $image['url']; ?> ">
-          </div>
+            </div>
           <?php endif; ?>
           <div class="grid-container">
             <div class="grid-x">
@@ -95,6 +98,9 @@
               </div>
             </div>
           </div>
+          @if(get_sub_field('background_image_aspect_ratio') == '3x1')
+            </div>
+          @endif
 				</section>
       <?php elseif( get_row_layout() == 'two_columns' ): ?>
 				<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="two-column-section <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
@@ -112,7 +118,7 @@
             <?php if(get_sub_field('column')): ?>
               <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x grid-padding-x <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> ">
               <?php while (have_rows('column')) : the_row(); ?>
-                <div class="cell small-12 medium-6 @if(get_sub_field('background_image')) cell-background-image @endif">
+                <div class="cell small-12 medium-6 @if(get_sub_field('background_image_7x5')) cell-background-image @endif">
                   <?php if(get_sub_field('background_image_7x5')): ?>
                     <div class="aspect aspect-7-5">
                       <div class="background-image">

@@ -28,6 +28,16 @@ export default {
     });
     */
 
+    //Menu Control Activate
+    $('#nav-primary').on('on.zf.toggler', function(e) {
+      alert('here we go');
+      $('#nav-primary-control').addClass('active');
+    });
+
+    $('#nav-primary').on('off.zf.toggler', function(e) {
+      $('#nav-primary-control').removeClass('active');
+    });
+
     //Toggle off canvas search
     $('.menu-item.search-icon').on('click', function (e) {
       e.preventDefault();
@@ -41,6 +51,35 @@ export default {
       $('.donate-amounts').toggleClass('visible');
     });
 
+    //Activate Post Categories Toggler when menu is Activate
+    $('#post-menu-dropdown').on('on.zf.toggler', function(e) {
+      $('.categories-toggle').addClass('active');
+      $('.categories-toggle .control').addClass('active');
+    });
+
+    $('#post-menu-dropdown').on('off.zf.toggler', function(e) {
+      $('.categories-toggle').removeClass('active');
+      $('.categories-toggle .control').removeClass('active');
+    });
+
+    //Blog scroll
+    if($("#blog-scroll").length) {
+      $('#blog-scroll').on('click', function(e) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(this).offset().top - 84
+        }, 500);
+        $(this).removeClass('shake');
+      });
+
+      let blogStart = $('#blog-scroll').offset().top;
+
+      $(window).scroll(function() {
+        let height = $(window).scrollTop();
+        if(height  > blogStart) {
+            $('#blog-scroll').removeClass('shake');
+        }
+      });
+    }
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

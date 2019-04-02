@@ -42,7 +42,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'footer_1' => __('Footer Column One', 'sage'),
-        'footer_2' => __('Footer Column Two', 'sage'),        
+        'footer_2' => __('Footer Column Two', 'sage'),
     ]);
 
     /**
@@ -54,9 +54,9 @@ add_action('after_setup_theme', function () {
     /**
      * Image Sizes
      */
-    add_image_size( 'small', 640, 640, true );
-    add_image_size('category-5x7', 400, 560, true);
-    add_image_size('hero', 1800, null, true);
+    add_image_size( 'small', 640, 640, false );
+    add_image_size('category-5x7', 400, 560, false);
+    add_image_size('hero', 1800, null, false);
 
     /**
      * Enable HTML5 markup support

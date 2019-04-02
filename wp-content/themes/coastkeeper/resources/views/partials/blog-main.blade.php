@@ -1,4 +1,12 @@
-      <?php
+<?php
+$args = array( 'post_type' => 'blog', 'posts_per_page' => 12, 'paged' => $paged, );
+$the_query = new WP_Query( $args );
+$n = 1;
+?>
+<section id="posts-main-content" class="two-column-section">
+  <div class="grid-container">
+      <div id="" class="grid-x grid-margin-x grid-margin-y large-up-2">
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post();
         $article_s = "cell posts-cell";
         if(get_field('blog_archive_image')) {
           $article_s .= " cell-top-image";
@@ -117,4 +125,21 @@
           @endif
     <?php
       $n++;
+      endwhile;
       ?>
+    </div>
+    <div class="pagination">
+      <?php
+        $big = 999999999; // need an unlikely integer
+        echo paginate_links( array(
+          'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          'prev_text'          => __(''),
+          'next_text'          => __(''),
+          'total' => $the_query->max_num_pages
+        ) );
+      ?>
+    </div>
+  </div>
+</section>

@@ -1,8 +1,11 @@
 <div class="sticky-container" data-sticky-container>
 <header id="header" class="header sticky" data-sticky data-sticky-on="large" data-margin-top="0" data-btm-anchor="footer:top">
+    <div class="grid-container">
     <div class="nav-button-container hide-for-large">
-        <button type="button" data-toggle="nav-primary" data-toggle="nav-primary" class="nav-button">
-            <div class="menu-icon"></div>
+        <button id="nav-primary-control" class="control" type="button" data-toggle="nav-primary" class="nav-button">
+          <span class="control-box">
+            <span class="control-inner"></span>
+          </span>
         </button>
     </div>
     <div class="nav-logo">
@@ -11,9 +14,6 @@
     </div>
     <nav id="nav-primary" class="nav-primary off-canvas in-canvas-for-large reveal-for-large position-right" data-off-canvas>
         <a class="off-canvas-logo hide-for-large" href="{{ home_url('/') }}"><img class="logo" alt="{{ get_bloginfo('name', 'display') }}" src="@asset('images/logo.svg')"></a>
-        <button class="close-button hide-for-large" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">×</span>
-        </button>
         @if (has_nav_menu('primary_navigation'))
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav vertical large-horizontal menu dropdown', 'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu data-closing-time="50">%3$s</ul>']) !!}
         @endif
@@ -96,6 +96,7 @@
         </div>
     </nav>
     <div class="nav-utility">
+    </div>
     </div>
 </header>
 </div>
