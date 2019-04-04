@@ -784,8 +784,30 @@ input[type=text] {
   }
 }
 
+.posts-section {
+  .grid-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 .cell-background-image {
   position: relative;
+}
+
+.column-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
 }
 
 .donate-cell {
@@ -1099,13 +1121,14 @@ input[type=text] {
 
 //Blog Template
 .hero-title-a {
-  background-color: rgba($blue-highlight, 0.75);
+  background-color: rgba($blue-highlight, 0.7);
   font-family: $font-ultra;
   font-weight: $font-ultra;
   line-height: 64px;
 
   &:hover {
     background-color: rgba($blue-highlight, 1);
+    color: $white;
   }
 }
 
@@ -1259,22 +1282,8 @@ input[type=text] {
   max-height: 600px;
 }
 
-#posts-main-content {
-  margin-top: 4rem;
-}
-
-.column-content {
+.article-content {
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  -webkit-box-flex: 1;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 100%;
-  max-width: 100%;
-  flex-direction: column;
-  justify-content: center;
   padding: 0 2rem;
 }
 
@@ -1337,10 +1346,16 @@ input[type=text] {
 .article-highlighted {
   width: calc(100% - 1.875rem) !important;
 
-  .column-content {
+  .article-content {
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.posts-cell {
+  .aspect {
+    margin-bottom: 1rem;
   }
 }
 

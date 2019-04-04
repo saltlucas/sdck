@@ -3,7 +3,7 @@ $args = array( 'post_type' => 'blog', 'posts_per_page' => 12, 'paged' => $paged,
 $the_query = new WP_Query( $args );
 $n = 1;
 ?>
-<section id="posts-main-content" class="two-column-section">
+<section id="posts-main-content" class="two-column-section posts-section">
   <div class="grid-container">
       <div id="" class="grid-x grid-margin-x grid-margin-y large-up-2">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -33,7 +33,7 @@ $n = 1;
                 </div>
               </div>
             <?php endif; ?>
-            <div class="column-content">
+            <div class="article-content">
               <header>
                 <h3 class="entry-title text-center"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h3>
                 @include('partials/entry-meta')
@@ -78,7 +78,7 @@ $n = 1;
                 </div>
               </div>
             <?php endif; ?>
-            <div class="column-content">
+            <div class="article-content">
               <header>
                 <h3 class="entry-title text-center"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h3>
                 @include('partials/entry-meta')
@@ -105,7 +105,7 @@ $n = 1;
                 </div>
               </div>
               @endif
-              <div class="column-content">
+              <div class="article-content">
                 <header>
                   <h3 class="entry-title text-center"><a href="<?php echo $ptd_permalink; ?>"><?php echo $ptd_title; ?></a></h3>
                   <time class="updated"><?php echo $ptd_date; ?></time>
