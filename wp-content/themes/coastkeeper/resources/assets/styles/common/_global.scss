@@ -180,6 +180,13 @@ strong {
   padding: 71.429% 0 0;
 }
 
+.flex-center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // Header
 .nav-button-container {
   position: absolute;
@@ -750,13 +757,30 @@ input[type=text] {
   position: relative;
   overflow: hidden;
 
+  .grid-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .aspect-3-1 {
     .grid-container {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
+      height: 100%;
     }
+
+    .grid-x {
+      max-width: 800px;
+    }
+  }
+}
+
+.two-column-section {
+  .grid-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -1240,8 +1264,18 @@ input[type=text] {
 }
 
 .column-content {
-  padding: 2rem 4rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
 }
 
 .top-image {

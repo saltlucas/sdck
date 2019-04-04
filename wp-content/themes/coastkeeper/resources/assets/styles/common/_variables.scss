@@ -2,24 +2,24 @@
 $spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-large: 6rem);
 
 @each $name, $value in $spacing {
-  .margin-top-#{$name} {
+  .margin-top-#{$name} .grid-container {
     margin-top: $value !important;
   }
 
-  .margin-bottom-#{$name} {
+  .margin-bottom-#{$name} .grid-container {
     margin-bottom: $value !important;
   }
 }
 
 @each $name, $value in $spacing {
-  .margin-#{$name} {
+  .margin-#{$name} .grid-container {
     margin-bottom: $value !important;
     margin-top: $value !important;
   }
 }
 
 @each $name, $value in $spacing {
-  .padding-#{$name} {
+  .padding-#{$name} .grid-container {
     padding-bottom: $value !important;
     padding-top: $value !important;
   }

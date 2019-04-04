@@ -11,8 +11,7 @@
     @if( $post_object && $paged <=2 )
       @include('partials.blog-main-header')
     @endif
-    @include('partials.content-blog-menu')
-    @include('partials.content-page')
+    @include('partials.blog-menu')
     @include('partials.blog-main')
   @endwhile
 @endsection

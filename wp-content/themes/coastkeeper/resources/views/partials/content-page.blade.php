@@ -91,13 +91,19 @@
             src="<?php echo $image['url']; ?> ">
             </div>
           <?php endif; ?>
-          <div class="grid-container">
-            <div class="grid-x">
-              <div class="small-12">
-                <?php the_sub_field('content'); ?>
+            <div class="grid-container">
+              @if(get_sub_field('background_image_aspect_ratio') == '3x1')
+                <div class="flex-center">
+              @endif
+              <div class="grid-x">
+                <div class="small-12">
+                  <?php the_sub_field('content'); ?>
+                </div>
               </div>
+              @if(get_sub_field('background_image_aspect_ratio') == '3x1')
+                </div>
+              @endif
             </div>
-          </div>
           @if(get_sub_field('background_image_aspect_ratio') == '3x1')
             </div>
           @endif
@@ -116,7 +122,7 @@
           <?php endif; ?>
           <div class="grid-container">
             <?php if(get_sub_field('column')): ?>
-              <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x grid-padding-x <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> ">
+              <div id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="grid-x @if(get_sub_field('padding' != 'no-padding')) echo 'grid-padding-x'; @endif <?php the_sub_field('class'); ?> <?php the_sub_field('background_color'); ?> <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> ">
               <?php while (have_rows('column')) : the_row(); ?>
                 <div class="cell small-12 medium-6 @if(get_sub_field('background_image_7x5')) cell-background-image @endif">
                   <?php if(get_sub_field('background_image_7x5')): ?>
@@ -263,12 +269,14 @@
               <?php while ( have_rows('square') ) : the_row(); ?>
                 <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
+                  @if(get_sub_field('link'))
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
+                  @endif
                     <div class="aspect-1-1">
                       <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
                           <?php
-                            $image = get_sub_field('background_image_sqare');
+                            $image = get_sub_field('background_image_square');
                           ?>
                           <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
                           sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
@@ -283,7 +291,9 @@
                         </div>
                 			</div>
                     </div>
+                  @if(get_sub_field('link'))
                   </a>
+                  @endif
                 </div>
                 <?php $n++; ?>
               <?php endwhile; ?>
