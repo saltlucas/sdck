@@ -111,7 +111,7 @@
       </div>
     </div>
   </section>
-  <section class="footer-bottom blue text-center text-white padding-large">
+  <section class="footer-bottom blue text-center text-white">
     <div class="h2">Thank You Supporters</div>
     <div id="copyright">&copy;<?php echo date("Y"); ?> San Diego Coastkeeper</div>
   </section>
