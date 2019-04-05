@@ -188,6 +188,10 @@ strong {
 }
 
 // Header
+#header .grid-container {
+  max-width: 100%;
+}
+
 .nav-button-container {
   position: absolute;
   right: 0;
@@ -1099,6 +1103,10 @@ input[type=text] {
 
 .staff-title {
   margin-top: 0;
+}
+
+.staff .cell .aspect {
+  position: relative;
 }
 
 //Annual Report Section

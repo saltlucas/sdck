@@ -2,16 +2,24 @@
   <section class="footer-email text-center margin-top-extra-large margin-bottom-extra-large">
     <div class="grid-container">
     <h2 class="margin-bottom-medium">Get Your Water News</h2>
-      <form class="footer-sign">
+      <form class="newsletter-lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <input type=hidden name='captcha_settings' value='{"keyname":"website_lead","fallback":"true","orgId":"00DG0000000C1g3","ts":""}'>
+        <input type=hidden name="oid" value="00DG0000000C1g3">
+        <input type=hidden name="retURL" value="https://www.sdcoastkeeper.org/newsletter-sign-up">
         <div class="grid-x grid-padding-x">
-          <div class="cell small-6">
-            <input type="text" id="name" name="name" placeholder="Your Name">
+          <div class="cell small-12 medium-4">
+            <input class="text-field" placeholder="First Name" id="first_name" maxlength="40" name="first_name" size="20" type="text" />
           </div>
-          <div class="cell small-6">
-            <input type="text" id="email" name="email" placeholder="Email">
+          <div class="cell small-12 medium-4">
+            <input class="text-field" placeholder="Last Name" id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+
+            <div class="g-recaptcha" data-sitekey="6LemROkSAAAAAK1LHaoyST4UTJ49nUMZTTBkK7kM"></div>
+          </div>
+          <div class="cell small-12 medium-4">
+            <input class="text-field" placeholder="Email Address"  id="email" maxlength="80" name="email" size="20" type="text" />
           </div>
         </div>
-        <input type="submit" class="button blue-highlight" value="Sign Up">
+        <input type="submit" class="button blue-highlight" value="Sign Up" name="submit">
       </form>
     </div>
   </section>
