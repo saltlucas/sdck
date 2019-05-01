@@ -54,7 +54,7 @@ add_action('after_setup_theme', function () {
     /**
      * Image Sizes
      */
-    add_image_size( 'small', 640, 640, false );
+    add_image_size( 'small', 840, 840, false );
     add_image_size('category-5x7', 400, 560, false);
     add_image_size('hero', 1800, null, false);
 

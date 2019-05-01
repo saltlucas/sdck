@@ -6,28 +6,6 @@
   $large = '1300w';
 
 @endphp
-<?php
-  function printClass () {
-    $classes = [];
-    if(get_sub_field('class')) { array_push($classes, get_sub_field('class')); }
-    if(get_sub_field('background_color')) { array_push($classes, get_sub_field('background_color')); }
-    if(get_sub_field('padding')) { array_push($classes, get_sub_field('padding')); }
-    if(get_sub_field('margin')) { array_push($classes, get_sub_field('margin')); }
-    if(get_sub_field('background_color') != 'white' && get_sub_field('background_color')) { array_push($classes, 'text-white'); }
-    $i = 0;
-    $len = count($classes);
-    foreach ($classes as $class) {
-      if ($i == $len - 1) {
-        echo $class;
-      }
-      else {
-        echo $class;
-        echo ' ';
-      }
-      $i++;
-    }
-  }
- ?>
 <article>
 <?php /*Flexible content section */ ?>
 	@if ( have_rows('sections') )
@@ -99,7 +77,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'one_column' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="one-column-section @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="one-column-section @php App\printClass(); @endphp">
           @if(get_sub_field('background_image_aspect_ratio') == '3x1')
             <div class="aspect aspect-3-1">
           @endif
@@ -131,7 +109,7 @@
           @endif
 				</section>
       <?php elseif( get_row_layout() == 'two_columns' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="two-column-section @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="two-column-section @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
             <div class="background-image">
               <?php
@@ -144,7 +122,7 @@
           <?php endif; ?>
           <div class="grid-container">
             <?php if(get_sub_field('column')): ?>
-              <div @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="grid-x @if(get_sub_field('padding' != 'no-padding')) grid-padding-x @endif  @php printClass(); @endphp">
+              <div @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="grid-x @if(get_sub_field('padding' != 'no-padding')) grid-padding-x @endif  @php App\printClass(); @endphp">
               <?php while (have_rows('column')) : the_row(); ?>
                 <div class="cell small-12 medium-6 @if(get_sub_field('background_image_7x5')) cell-background-image @endif">
                   <?php if(get_sub_field('background_image_7x5')): ?>
@@ -169,7 +147,7 @@
           </div>
 				</section>
       <?php elseif( get_row_layout() == 'select_category' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="select-category-section @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="select-category-section @php App\printClass(); @endphp">
           <?php
           $count = count(get_sub_field('category'));
           if( have_rows('category') ):  ?>
@@ -216,7 +194,7 @@
           endif; ?>
 				</section>
       <?php elseif( get_row_layout() == 'tabs' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="tab-section @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="tab-section @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
@@ -272,7 +250,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'square_grid' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="square-grid text-white @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="square-grid text-white @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
@@ -293,7 +271,7 @@
                   @if(get_sub_field('link'))
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
                   @endif
-                    <div class="aspect-1-1">
+                    <div class="aspect aspect-1-1">
                       <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
                           <?php
@@ -323,7 +301,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'three_square_grid' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid text-white @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid text-white @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
@@ -342,7 +320,7 @@
                 <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
-                    <div class="aspect-1-1">
+                    <div class="aspect aspect-1-1">
                       <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
                           <?php
@@ -370,7 +348,7 @@
           </div>
         </section>
       <?php elseif( get_row_layout() == 'accomplishments_grid' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid accomplishment_grid text-white @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid accomplishment_grid text-white @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php
@@ -393,7 +371,7 @@
               ?>
                 <div class="cell square <?php echo $background_color ?> <?php if($background_color != 'white' && $background_color != null ) { echo 'text-white'; } ?>">
                   <a data-open="accomplishmentModal-<?php echo strval($n); ?>">
-                    <div class="aspect-1-1">
+                    <div class="aspect aspect-1-1">
                       <?php if($background_image): ?>
                         <div class="background-image">
                           <?php
@@ -435,7 +413,7 @@
           <?php endforeach; ?>
         </section>
       <?php elseif( get_row_layout() == 'staff' ): ?>
-				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid text-white staff @php printClass(); @endphp">
+				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid text-white staff @php App\printClass(); @endphp">
           <?php if(get_sub_field('background_image_hero')): ?>
           <div class="background-image">
             <?php

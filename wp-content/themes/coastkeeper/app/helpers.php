@@ -138,3 +138,28 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Easily print multiple classes from acf
+ * @return classes
+ */
+function printClass () {
+  $classes = [];
+  if(get_sub_field('class')) { array_push($classes, get_sub_field('class')); }
+  if(get_sub_field('background_color')) { array_push($classes, get_sub_field('background_color')); }
+  if(get_sub_field('padding')) { array_push($classes, get_sub_field('padding')); }
+  if(get_sub_field('margin')) { array_push($classes, get_sub_field('margin')); }
+  if(get_sub_field('background_color') != 'white' && get_sub_field('background_color')) { array_push($classes, 'text-white'); }
+  $i = 0;
+  $len = count($classes);
+  foreach ($classes as $class) {
+    if ($i == $len - 1) {
+      echo $class;
+    }
+    else {
+      echo $class;
+      echo ' ';
+    }
+    $i++;
+  }
+}

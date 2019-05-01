@@ -1,6 +1,8 @@
 @php
   $small = '640w';
   $large = '1300w';
+  $hero = '1800w';
+  $hero_2x = '2800w'
 @endphp
 <?php
   $pageTitle = get_field_object('header_style');
@@ -9,14 +11,13 @@
   	while( have_rows('one_column') ): the_row(); ?>
     <div class="page-header">
   <?php if(get_sub_field('background_image')): ?>
-  <section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="one-column-section <?php the_sub_field('class'); ?>  <?php the_sub_field('padding'); ?> <?php the_sub_field('margin'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+  <section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="one-column-section @php App\printClass(); @endphp">
     <div class="aspect aspect-2-1">
       <div class="background-image">
         <?php
           $image = get_sub_field('background_image');
         ?>
-        <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-        sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+        <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $hero . "," . $image['url'] . " " . $hero_2x; ?>"
         src="<?php echo $image['url']; ?> ">
       </div>
     </div>
