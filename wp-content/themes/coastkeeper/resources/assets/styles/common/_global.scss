@@ -128,59 +128,6 @@ strong {
   width: 100%;
 }
 
-//Aspect Ratios
-.2 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 66.64% 0 0;
-  overflow: hidden;
-}
-
-.aspect-1-1 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 100% 0 0;
-  overflow: hidden;
-}
-
-.aspect-2-1 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 50% 0 0;
-  overflow: hidden;
-}
-
-.aspect-3-1 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 33.33% 0 0;
-  overflow: hidden;
-}
-
-.aspect-5-7 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 140% 0 0;
-}
-
-.aspect-7-5 {
-  min-height: auto;
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding: 71.429% 0 0;
-}
-
 .flex-center {
   height: 100%;
   display: flex;
@@ -766,17 +713,14 @@ input[type=text] {
   }
 
   .aspect-3-1 {
-    .grid-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
     .grid-x {
       max-width: 800px;
     }
+  }
+
+  .button {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -972,7 +916,7 @@ input[type=text] {
     }
 
     .background-content {
-      background-color: transparent;
+      background-color: rgba(77, 77, 77, 0.1);
 
       .cell a {
         background-color: $blue-highlight;
