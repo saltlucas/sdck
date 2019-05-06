@@ -663,7 +663,7 @@ input[type=text] {
       padding-right: 1rem;
 
       &.blue {
-        background-color: rgba($blue, 0.8);
+        background-color: rgba($blue, 0.85);
       }
     }
   }
@@ -1053,6 +1053,11 @@ input[type=text] {
 .staff .cell .aspect,
 .square .aspect {
   position: relative;
+}
+
+//Square grid
+.square-grid {
+  margin-top: 4rem;
 }
 
 //Annual Report Section
