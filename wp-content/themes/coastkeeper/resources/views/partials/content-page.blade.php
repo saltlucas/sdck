@@ -220,7 +220,7 @@
           <?php endif; ?>
           <?php if( have_rows('tab_content_holder') ):  ?>
             <?php while ( have_rows('tab_content_holder') ) : the_row(); ?>
-              <div class="tabs-content <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>" data-tabs-content="section-tabs">
+              <div class="tabs-content-container <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>" data-tabs-content="section-tabs">
                 <?php if( have_rows('tab_content') ):  ?>
                 <?php $i = 1; ?>
                 <?php while ( have_rows('tab_content') ) : the_row(); ?>

@@ -866,6 +866,7 @@ input[type=text] {
 .select-category-section {
   position: relative;
   z-index: 2;
+  margin-top: 4rem;
 }
 
 .category-slider {
@@ -957,15 +958,25 @@ input[type=text] {
 }
 
 //Tabs
+.tab-section {
+  margin-top: 4rem;
+}
+
 #section-tabs {
   text-align: center;
   background-color: transparent;
   border: none;
 }
 
+.tabs-content-container {
+  .background-image {
+    color: $blue;
+  }
+}
+
 .tabs-content {
   border: none;
-  background-color: $blue;
+  background-color: transparent;
   position: relative;
   padding: 0;
   color: $white;
@@ -1061,8 +1072,18 @@ input[type=text] {
 }
 
 //Staff square grid
-.teacher-quotes #squares > .cell {
-  padding: 1rem;
+.teacher-quotes {
+  .grid-container {
+    max-width: 1200px;
+  }
+
+  #squares > .cell {
+    padding: 1rem;
+  }
+}
+
+.three-square-grid .background-content {
+  position: relative;
 }
 
 //Annual Report Section
