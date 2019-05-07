@@ -319,7 +319,9 @@
               <?php while ( have_rows('square') ) : the_row(); ?>
                 <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
+                  <?php if(get_sub_field('link')): ?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
+                  <?php endif; ?>
                     <div class="aspect aspect-1-1">
                       <?php if(get_sub_field('background_image_square')): ?>
                         <div class="background-image">
@@ -339,7 +341,9 @@
                         </div>
                 			</div>
                     </div>
+                  <?php if(get_sub_field('link')): ?>
                   </a>
+                  <?php endif; ?>
                 </div>
                 <?php $n++; ?>
               <?php endwhile; ?>
@@ -429,7 +433,9 @@
               <?php while ( have_rows('square') ) : the_row(); ?>
                 <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
                   <?php $values = get_sub_field('new_tab');	?>
+                  <?php if(get_sub_field('link')): ?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
+                  <?php endif; ?>
                     <div class="aspect aspect-1-1">
                       <?php if(get_sub_field('background_image_staff')): ?>
                         <div class="background-image">
@@ -451,7 +457,9 @@
                         </div>
                 			</div>
                     </div>
+                  <?php if(get_sub_field('link')): ?>
                   </a>
+                  <?php endif; ?>
                 </div>
                 <?php $n++; ?>
               <?php endwhile; ?>
