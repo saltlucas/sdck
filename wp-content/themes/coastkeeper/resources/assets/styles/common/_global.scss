@@ -968,18 +968,17 @@ input[type=text] {
   border: none;
 }
 
-.tabs-content-container {
-  .background-image {
-    color: $blue;
-  }
-}
-
 .tabs-content {
   border: none;
   background-color: transparent;
   position: relative;
   padding: 0;
   color: $white;
+}
+
+.tabs-panel {
+  position: relative;
+  background-color: $blue;
 }
 
 .tabs-title {
