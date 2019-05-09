@@ -473,9 +473,8 @@
             <div class="grid-x">
               <div class="small-12 large-10 large-offset-1">
                 <?php the_sub_field('content'); ?>
-                <?php $report = get_sub_field('report_link') ?>
                 <div class="report-wrap text-center">
-                  <a target="_blank" class="report-single-link" href="<?php echo $report['url']; ?>">
+                  <a target="_blank" class="report-single-link" href="<?php the_sub_field('report_link') ?>">
                     <?php
                       $image = get_sub_field('report_image');
                     ?>
