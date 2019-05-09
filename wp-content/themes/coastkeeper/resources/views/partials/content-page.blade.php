@@ -86,8 +86,9 @@
             <?php
               $image = get_sub_field('background_image_hero');
             ?>
-            <img data-srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
-            data-src="<?php echo $image['url']; ?> ">
+            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
+            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+            src="<?php echo $image['url']; ?> ">
             </div>
           <?php endif; ?>
             <div class="grid-container">
