@@ -713,6 +713,12 @@ input[type=text] {
     padding-top: 4rem;
   }
 
+  &.background-image-present {
+    .grid-container {
+      padding-bottom: 4rem;
+    }
+  }
+
   .aspect-3-1 {
     .grid-x {
       max-width: 800px;
