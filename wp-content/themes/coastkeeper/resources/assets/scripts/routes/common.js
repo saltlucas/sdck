@@ -1,6 +1,7 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
+
     // Prevent small screen page refresh sticky bug
     $(window).on('sticky.zf.unstuckfrom:bottom', function(e) {
       if (!Foundation.MediaQuery.atLeast('large')) {
@@ -116,5 +117,14 @@ export default {
         }
       ]
     });
+
+
+    //Lazy load images through vanilla-lazyload
+
+    //var lazyLoadInstance = new LazyLoad({
+    //    elements_selector: ".background-image img",
+    //    threshold: -10,
+    //});
+
   },
 };

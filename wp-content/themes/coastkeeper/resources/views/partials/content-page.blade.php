@@ -48,11 +48,11 @@
       <?php elseif( get_row_layout() == 'donation' ): ?>
         <section id="donation-section" class="donate-section grid-container <?php echo sanitize_title_with_dashes(get_sub_field('class')); ?>">
           <div class="grid-x">
-            <div class="cell small-12 medium-7">
+            <div class="cell small-12 medium-6">
               <h3 class="donate-title"><?php the_sub_field('donate_title'); ?></h3>
               <div class="donate-text"><?php the_sub_field('donate_information'); ?></div>
             </div>
-            <div class="cell small-12 medium-5">
+            <div class="cell small-12 medium-6">
               <div class="giving-box">
                 <ul class="toggle-giving horizontal-ul">
                   <li data-toggle-id="one-time" class="button active">Donate Once</li>
@@ -86,9 +86,8 @@
             <?php
               $image = get_sub_field('background_image_hero');
             ?>
-            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
-            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-            src="<?php echo $image['url']; ?> ">
+            <img data-srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
+            data-src="<?php echo $image['url']; ?> ">
             </div>
           <?php endif; ?>
             <div class="grid-container">

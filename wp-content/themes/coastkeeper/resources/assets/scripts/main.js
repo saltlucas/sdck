@@ -6,6 +6,12 @@ import "./autoload/**/*";
 
 //Import yarn packages
 import 'slick-carousel/slick/slick.min';
+import 'vanilla-lazyload/dist/lazyload.min'
+/* eslint-disable no-unused-vars */
+import LazyLoad from "vanilla-lazyload";
+/* eslint-disable no-unused-vars */
+
+
 
 // import local dependencies
 import Router from './util/Router';
