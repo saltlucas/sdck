@@ -19,9 +19,12 @@ $spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-la
 }
 
 @each $name, $value in $spacing {
-  .padding-#{$name} {
-    padding-bottom: $value !important;
+  .padding-top-#{$name} {
     padding-top: $value !important;
+  }
+
+  .padding-bottom-#{$name} {
+    padding-bottom: $value !important;
   }
 }
 
