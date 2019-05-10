@@ -492,7 +492,7 @@
       <?php elseif( get_row_layout() == 'sponsors' ): ?>
 			<section id="sponsors">
         <div class="grid-container">
-          <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+          <div class="grid-x grid-padding-x small-up-2 medium-up-3">
           <?php
           if( have_rows('sponsor') ):
               while ( have_rows('sponsor') ) : the_row(); ?>
