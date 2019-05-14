@@ -1195,6 +1195,10 @@ input[type=text] {
 }
 
 //Staff square grid
+.square-grid.staff .background-content::after {
+  background-color: transparent;
+}
+
 .teacher-quotes {
   .grid-container {
     max-width: 1200px;
