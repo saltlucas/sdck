@@ -44,6 +44,10 @@ article .one-column-section:not(.background-image-present) img,
   }
 }
 
+article .one-column-section:not(.background-image-present):last-child {
+  margin-bottom: 4rem;
+}
+
 //general
 section {
   position: relative;
@@ -1195,7 +1199,7 @@ input[type=text] {
 
 //Blog Template
 #posts-main-content {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .template-blog .two-column-section .grid-container {
