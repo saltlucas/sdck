@@ -1163,6 +1163,13 @@ input[type=text] {
       height: 100%;
       background-color: rgba($blue, 0.3);
       z-index: 2;
+      transition: background-color 0.4s;
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba($blue-highlight, 0.8);
+      }
     }
 
     .grid-x {

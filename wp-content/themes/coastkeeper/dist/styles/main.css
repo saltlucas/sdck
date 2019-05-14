@@ -20203,6 +20203,13 @@ input[type=text] {
   height: 100%;
   background-color: rgba(0, 103, 151, 0.3);
   z-index: 2;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.square-grid .background-content:hover::after {
+  background-color: rgba(63, 162, 247, 0.8);
 }
 
 .square-grid .background-content .grid-x {
