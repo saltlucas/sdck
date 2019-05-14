@@ -32,8 +32,7 @@
 }
 
 article .one-column-section:not(.background-image-present) img,
-.square-grid img,
-.top-image img {
+.square-grid img {
   visibility: hidden;
   opacity: 0;
   display: block;
@@ -1195,6 +1194,14 @@ input[type=text] {
 }
 
 //Blog Template
+#posts-main-content {
+  margin-top: 6rem;
+}
+
+.template-blog .two-column-section .grid-container {
+  max-width: 100%;
+}
+
 .hero-title-a {
   background-color: rgba($blue-highlight, 0.7);
   font-family: $font-ultra;
@@ -1372,10 +1379,15 @@ input[type=text] {
 
   img {
     width: 100%;
+    opacity: 0;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: scale 0.7s cubic-bezier(0.2, 1, 0.22, 1), opacity 1s;
     -webkit-transition: scale 0.7s cubic-bezier(0.2, 1, 0.22, 1), opacity 1s;
+
+    &.loaded {
+      opacity: 1;
+    }
   }
 }
 
@@ -1448,6 +1460,11 @@ input[type=text] {
     background-color: $blue;
     color: $white !important;
   }
+}
+
+.grid-margin-y > .posts-cell {
+  margin-top: 0 !important;
+  margin-bottom: 6rem !important;
 }
 
 .pagination a {
@@ -1528,6 +1545,10 @@ input[type=text] {
 }
 
 //footer
+.footer-email {
+  background-color: #eee;
+}
+
 .footer-bottom {
   position: relative;
   padding-top: 4rem;

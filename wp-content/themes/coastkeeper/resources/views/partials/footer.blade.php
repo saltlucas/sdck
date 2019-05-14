@@ -1,5 +1,5 @@
 <footer id="footer" class="content-info">
-  <section class="footer-email text-center margin-top-extra-large margin-bottom-extra-large">
+  <section class="footer-email text-center padding-top-extra-large padding-bottom-extra-large">
     <div class="grid-container">
     <h2 class="margin-bottom-medium">Get Your Water News</h2>
       <form class="newsletter-lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">

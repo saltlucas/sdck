@@ -26,9 +26,9 @@ $n = 1;
                     $large_url = get_the_post_thumbnail_url($id, 'large');
                   ?>
                   <a href="{{ get_permalink() }}">
-                  <img srcset="<?php  echo $small_url . " " . $small . ", " . $large_url . " " . $large; ?>"
-                  sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-                  src="<?php get_the_post_thumbnail_url(); ?> ">
+                  <img data-srcset="<?php  echo $small_url . " " . $small . ", " . $large_url . " " . $large; ?>"
+                  data-sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                  data-src="<?php get_the_post_thumbnail_url(); ?> ">
                   </a>
                 </div>
               </div>
@@ -71,9 +71,9 @@ $n = 1;
                     $image = get_field('blog_archive_image');
                   ?>
                   <a href="{{ get_permalink() }}">
-                  <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
-                  sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-                  src="<?php echo $image['url']; ?> ">
+                  <img data-srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['large'] . " " . $large; ?>"
+                  data-sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                  data-src="<?php echo $image['url']; ?> ">
                   </a>
                 </div>
               </div>
@@ -98,9 +98,9 @@ $n = 1;
               <div class="aspect aspect-2-1">
                 <div class="top-image">
                   <a href="<?php echo $ptd_permalink; ?>">
-                    <img srcset="<?php  echo $ptd_small_url . " " . $small . ", " . $ptd_large_url . " " . $large; ?>"
-                  sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-                  src="<?php echo $ptd_image_url; ?> ">
+                    <img data-srcset="<?php  echo $ptd_small_url . " " . $small . ", " . $ptd_large_url . " " . $large; ?>"
+                  data-sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                  data-src="<?php echo $ptd_image_url; ?> ">
                   </a>
                 </div>
               </div>

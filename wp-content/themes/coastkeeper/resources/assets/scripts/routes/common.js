@@ -131,6 +131,12 @@ export default {
         elements_selector: ".background-image img",
     });
 
+    var lazyLoadBlogInstance = new LazyLoad({
+      element_selector: ".top-image img",
+      load_delay: 1000,
+      threshhold: 0,
+    });
+
     //init ScrollMagic
     var controller = new ScrollMagic.Controller();
 
@@ -162,7 +168,7 @@ export default {
         .addTo(controller);
     });
 
-    $("article .one-column-section:not(.background-image-present) img, .square-grid img, .posts-cell img").each(function() {
+    $("article .one-column-section:not(.background-image-present) img, .square-grid img").each(function() {
       let currentLoad = this;
 
       var loadSections = new ScrollMagic.Scene({

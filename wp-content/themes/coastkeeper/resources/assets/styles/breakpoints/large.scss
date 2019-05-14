@@ -76,6 +76,10 @@
 
 #header {
   height: 76px;
+
+  .grid-container {
+    padding: 0 2rem;
+  }
 }
 
 .nav-logo {
@@ -170,7 +174,7 @@
     li {
       &.menu-item.menu-button {
         margin-bottom: 0;
-        padding: 13px 1rem;
+        padding: 13px 2rem 1rem;
 
         a {
           width: 100%;
