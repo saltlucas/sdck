@@ -11230,7 +11230,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
     //create a scrollmagic scence, choose selector, and add to controller
     //wrap in each method to target individually.
-    $(".background-image-present").each(function() {
+    $(".background-image-present, .square-grid .cell").each(function() {
       var currentLoad = this;
 
       var loadSections = new __WEBPACK_IMPORTED_MODULE_1_scrollmagic___default.a.Scene({
@@ -11256,7 +11256,7 @@ Router.prototype.loadEvents = function loadEvents () {
         .addTo(controller);
     });
 
-    $("article .one-column-section:not(.background-image-present) img, .square-grid img").each(function() {
+    $("article .one-column-section:not(.background-image-present) img").each(function() {
       var currentLoad = this;
 
       var loadSections = new __WEBPACK_IMPORTED_MODULE_1_scrollmagic___default.a.Scene({

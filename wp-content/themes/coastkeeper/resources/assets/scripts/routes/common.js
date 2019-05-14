@@ -142,7 +142,7 @@ export default {
 
     //create a scrollmagic scence, choose selector, and add to controller
     //wrap in each method to target individually.
-    $(".background-image-present").each(function() {
+    $(".background-image-present, .square-grid .cell").each(function() {
       let currentLoad = this;
 
       var loadSections = new ScrollMagic.Scene({
@@ -168,7 +168,7 @@ export default {
         .addTo(controller);
     });
 
-    $("article .one-column-section:not(.background-image-present) img, .square-grid img").each(function() {
+    $("article .one-column-section:not(.background-image-present) img").each(function() {
       let currentLoad = this;
 
       var loadSections = new ScrollMagic.Scene({

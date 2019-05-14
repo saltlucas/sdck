@@ -18997,8 +18997,7 @@ table:last-child {
   -webkit-clip-path: inset(0 0 0 0);
 }
 
-article .one-column-section:not(.background-image-present) img,
-.square-grid img {
+article .one-column-section:not(.background-image-present) img {
   visibility: hidden;
   opacity: 0;
   display: block;
@@ -19007,8 +19006,7 @@ article .one-column-section:not(.background-image-present) img,
   transition: opacity 0.7s ease 0.5s;
 }
 
-article .one-column-section:not(.background-image-present) img.load-image,
-.square-grid img.load-image {
+article .one-column-section:not(.background-image-present) img.load-image {
   visibility: visible;
   opacity: 1;
 }
@@ -20210,6 +20208,19 @@ input[type=text] {
 .square-grid .background-content .grid-x {
   position: relative;
   z-index: 3;
+}
+
+.square-grid .cell {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease 0.5s;
+  -o-transition: opacity 0.7s ease 0.5s;
+  transition: opacity 0.7s ease 0.5s;
+}
+
+.square-grid .cell.load-section {
+  visibility: visible;
+  opacity: 1;
 }
 
 .teacher-quotes .grid-container {
