@@ -6,11 +6,8 @@ import "./autoload/**/*";
 
 //Import yarn packages
 import 'slick-carousel/slick/slick.min';
-import 'vanilla-lazyload/dist/lazyload.min'
-/* eslint-disable no-unused-vars */
-import LazyLoad from "vanilla-lazyload";
-/* eslint-disable no-unused-vars */
-
+import 'vanilla-lazyload/dist/lazyload.min';
+import 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js';
 
 
 // import local dependencies

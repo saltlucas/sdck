@@ -1,6 +1,13 @@
+/* eslint-disable no-unused-vars */
+import LazyLoad from "vanilla-lazyload";
+import ScrollMagic from "scrollmagic";
+/* eslint-disable no-unused-vars */
+
 export default {
   init() {
     // JavaScript to be fired on all pages
+
+    $('#body-reveal').addClass('load');
 
     // Prevent small screen page refresh sticky bug
     $(window).on('sticky.zf.unstuckfrom:bottom', function(e) {
@@ -120,11 +127,40 @@ export default {
 
 
     //Lazy load images through vanilla-lazyload
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".background-image img",
+    });
 
-    //var lazyLoadInstance = new LazyLoad({
-    //    elements_selector: ".background-image img",
-    //    threshold: -10,
-    //});
+    //init ScrollMagic
+    var controller = new ScrollMagic.Controller();
+
+    //create a scrollmagic scence, choose selector, and add to controller
+    //wrap in each method to target individually.
+    $(".background-image-present").each(function() {
+      let currentLoad = this;
+
+      var loadSections = new ScrollMagic.Scene({
+        offset: 0,
+        triggerHook: 1,
+        triggerElement: currentLoad,
+      })
+        .setClassToggle( currentLoad, "load-section")
+        .addTo(controller);
+    });
+
+    //Add class to reveal text effect similar to above
+    $(".main h1, .main h2").each(function() {
+      let currentLoad = this;
+
+      var loadSections = new ScrollMagic.Scene({
+        offset: 0,
+        triggerHook: 1,
+        triggerElement: currentLoad,
+        reverse: false,
+      })
+        .setClassToggle( currentLoad, "load-text")
+        .addTo(controller);
+    });
 
   },
 };

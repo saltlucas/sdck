@@ -19,8 +19,7 @@
                   <?php
                     $image = get_sub_field('background_image_hero');
                   ?>
-                  <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
-                  sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+                  <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $hero . "," . $image['url'] . " " . $hero_2x; ?>"
                   src="<?php echo $image['url']; ?> ">
                 </div>
           	    <div id="hero-content" class="background-content va-container" role="main">
@@ -86,9 +85,9 @@
             <?php
               $image = get_sub_field('background_image_hero');
             ?>
-            <img srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
-            sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
-            src="<?php echo $image['url']; ?> ">
+            <img data-srcset="<?php  echo $image['sizes'][ 'small' ] . " " . $small . "," . $image['sizes']['hero'] . " " . $large; ?>"
+            data-sizes="(max-width: 640px) 640px, (min-width: 641px) 1300px"
+            data-src="<?php echo $image['url']; ?> ">
             </div>
           <?php endif; ?>
             <div class="grid-container">

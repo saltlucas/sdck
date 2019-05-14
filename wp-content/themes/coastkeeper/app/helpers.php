@@ -147,7 +147,7 @@ function printClass () {
   $classes = [];
   if(get_sub_field('class')) { array_push($classes, get_sub_field('class')); }
   if(get_sub_field('background_color')) { array_push($classes, get_sub_field('background_color')); }
-  if(get_sub_field('background_image_hero') && (get_sub_field('background_image_aspect_ratio') != '3x1')) { array_push($classes, 'background-image-present'); }
+  if(get_sub_field('background_image_hero')) { array_push($classes, 'background-image-present'); }
   if(get_sub_field('padding')) { array_push($classes, get_sub_field('padding')); }
   if(get_sub_field('margin')) { array_push($classes, get_sub_field('margin')); }
   if(get_sub_field('background_color') != 'white' && get_sub_field('background_color')) { array_push($classes, 'text-white'); }
