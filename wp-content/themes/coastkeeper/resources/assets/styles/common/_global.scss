@@ -1131,6 +1131,17 @@ input[type=text] {
 }
 
 //Staff
+.staff {
+  .aspect-1-1 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 100% 0 0;
+    overflow: hidden;
+  }
+}
+
 .staff-cell {
   padding: 1rem 2rem;
   background-color: rgba($blue, 0.2);
