@@ -31,12 +31,12 @@
   }
 }
 
-.one-column-section:not(.background-image-present) img,
+:not(.page-header) .one-column-section:not(.background-image-present) img,
 .top-image img {
   visibility: hidden;
   opacity: 0;
   display: block;
-  transition: opacity 0.7s ease 1s;
+  transition: opacity 0.7s ease 0.5s;
 
   &.load-image {
     visibility: visible;

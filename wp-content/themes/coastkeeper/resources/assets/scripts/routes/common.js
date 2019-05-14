@@ -162,7 +162,7 @@ export default {
         .addTo(controller);
     });
 
-    $(".one-column-section:not(.background-image-present) img, .posts-cell img").each(function() {
+    $(":not(.page-header) .one-column-section:not(.background-image-present) img, .posts-cell img").each(function() {
       let currentLoad = this;
 
       var loadSections = new ScrollMagic.Scene({
