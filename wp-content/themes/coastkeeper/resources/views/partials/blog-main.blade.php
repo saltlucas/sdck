@@ -86,8 +86,8 @@ $n = 1;
               <div class="entry-summary">
                 @php(the_excerpt())
               </div>
-              <a href="{{ get_permalink() }}" class="read-more">Read More</a>
             </div>
+            <a href="{{ get_permalink() }}" class="read-more">Read More</a>
           </article>
             @if($post_to_display)
               @php($post_to_display= false)
@@ -118,8 +118,8 @@ $n = 1;
                 <div class="entry-summary">
                   <?php echo $ptd_excerpt; ?>
                 </div>
-                <a href="<?php echo $ptd_permalink; ?>" class="read-more">Read More</a>
               </div>
+              <a href="<?php echo $ptd_permalink; ?>" class="read-more">Read More</a>
             </article>
             @endif
           @endif
