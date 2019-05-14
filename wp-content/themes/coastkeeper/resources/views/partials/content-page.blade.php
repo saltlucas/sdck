@@ -281,6 +281,7 @@
                           src="<?php echo $image['url']; ?> ">
                         </div>
                       <?php endif; ?>
+                      <?php if(get_sub_field('content')): ?>
                       <div class="background-content va-container" role="main">
                       	<div class="grid-x align-middle">
                       		<div class="cell content-cell">
@@ -288,6 +289,7 @@
                           </div>
                         </div>
                 			</div>
+                      <?php endif; ?>
                     </div>
                   @if(get_sub_field('link'))
                   </a>
@@ -332,6 +334,7 @@
                           src="<?php echo $image['url']; ?> ">
                         </div>
                       <?php endif; ?>
+                      <?php if(get_sub_field('content')): ?>
                       <div class="background-content va-container" role="main">
                       	<div class="grid-x align-middle">
                       		<div class="cell content-cell">
@@ -339,6 +342,7 @@
                           </div>
                         </div>
                 			</div>
+                      <?php endif; ?>
                     </div>
                   <?php if(get_sub_field('link')): ?>
                   </a>
