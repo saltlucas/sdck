@@ -415,6 +415,9 @@
               <div id="accomplishmentModal-<?php echo strval($k); ?>" class="reveal" data-reveal>
                 <h3><?php echo $accomplishment_title; ?></h3>
                 <?php echo $content; ?>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
               <?php $k++; ?>
           <?php endforeach; ?>

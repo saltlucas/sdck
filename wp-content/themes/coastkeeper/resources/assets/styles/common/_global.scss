@@ -1145,6 +1145,10 @@ input[type=text] {
   position: relative;
 }
 
+.staff a:hover p {
+  color: $white;
+}
+
 //Square grid
 .square-grid {
   margin-top: 4rem;
@@ -1203,6 +1207,11 @@ input[type=text] {
 
 .three-square-grid .background-content {
   position: relative;
+}
+
+//Accomplishment grid
+.reveal-overlay {
+  background-color: rgba($blue, 0.8);
 }
 
 //Annual Report Section

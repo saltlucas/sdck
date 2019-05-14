@@ -20186,6 +20186,10 @@ input[type=text] {
   position: relative;
 }
 
+.staff a:hover p {
+  color: #fefefe;
+}
+
 .square-grid {
   margin-top: 4rem;
 }
@@ -20240,6 +20244,10 @@ input[type=text] {
 
 .three-square-grid .background-content {
   position: relative;
+}
+
+.reveal-overlay {
+  background-color: rgba(0, 103, 151, 0.8);
 }
 
 .report-single-link {
