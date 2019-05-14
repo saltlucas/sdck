@@ -944,6 +944,10 @@ input[type=text] {
   position: relative;
   z-index: 2;
   margin-top: 4rem;
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
 }
 
 .category-slider {
