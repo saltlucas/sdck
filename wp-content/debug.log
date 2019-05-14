@@ -8939,3 +8939,51 @@ Stack trace:
 [14-May-2019 21:18:47 UTC] PHP Notice:  Undefined variable: small in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/1e8d38ce0f67691846a329f9c37b005e2fb5f9ce.php on line 74
 [14-May-2019 21:18:47 UTC] PHP Notice:  Undefined variable: large in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/1e8d38ce0f67691846a329f9c37b005e2fb5f9ce.php on line 74
 [14-May-2019 21:18:47 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/1e8d38ce0f67691846a329f9c37b005e2fb5f9ce.php on line 92
+[14-May-2019 22:04:42 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:42 pm
+[14-May-2019 22:04:42 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:42 pm
+[14-May-2019 22:05:23 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:23 pm
+[14-May-2019 22:05:23 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:23 pm
+[14-May-2019 22:05:23 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:23 pm
+[14-May-2019 22:05:24 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:24 pm
+[14-May-2019 22:05:26 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:26 pm
+[14-May-2019 22:05:27 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:27 pm
+[14-May-2019 22:05:27 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:27 pm
+[14-May-2019 22:05:27 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:27 pm
+[14-May-2019 22:05:27 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:27 pm
+[14-May-2019 22:05:29 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:29 pm
+[14-May-2019 22:05:29 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:29 pm
+[14-May-2019 22:05:29 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:29 pm
+[14-May-2019 22:05:30 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:30 pm
+[14-May-2019 22:05:30 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:30 pm
+[14-May-2019 22:05:33 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:33 pm
+[14-May-2019 22:05:33 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:33 pm
+[14-May-2019 22:05:33 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:33 pm
+[14-May-2019 22:05:33 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:33 pm
+[14-May-2019 22:05:34 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:34 pm
+[14-May-2019 22:05:34 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:34 pm
+[14-May-2019 22:05:50 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:50 pm
+[14-May-2019 22:05:50 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:50 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:50 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:50 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:54 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:54 pm
+[14-May-2019 22:05:55 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:55 pm
+[14-May-2019 22:05:55 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:55 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:55 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:05:55 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:06:51 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:51 pm
+[14-May-2019 22:06:51 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:51 pm
+[14-May-2019 22:06:51 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:06:51 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:06:51 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:06:51 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 22:06:59 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:59 pm
+[14-May-2019 22:09:59 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:59 pm
+[14-May-2019 22:09:59 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:59 pm
+[14-May-2019 22:10:17 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:17 pm
+[14-May-2019 22:10:22 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:22 pm
+[14-May-2019 22:10:25 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:25 pm
+[14-May-2019 22:10:28 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:28 pm
+[14-May-2019 22:10:30 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:30 pm
+[14-May-2019 22:10:33 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:33 pm

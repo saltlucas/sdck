@@ -1149,6 +1149,28 @@ input[type=text] {
 //Square grid
 .square-grid {
   margin-top: 4rem;
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
+
+  .background-content {
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($blue, 0.3);
+      z-index: 2;
+    }
+
+    .grid-x {
+      position: relative;
+      z-index: 3;
+    }
+  }
 }
 
 //Staff square grid
