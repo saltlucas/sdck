@@ -1132,15 +1132,6 @@ input[type=text] {
 
 //Staff
 .staff {
-  .aspect-1-1 {
-    min-height: auto;
-    width: 100%;
-    position: relative;
-    height: 0;
-    padding: 100% 0 0;
-    overflow: hidden;
-  }
-
   .background-content {
     position: absolute !important;
   }
@@ -1167,6 +1158,15 @@ input[type=text] {
 //Square grid
 .square-grid {
   margin-top: 4rem;
+
+  .aspect-1-1 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 100% 0 0;
+    overflow: hidden;
+  }
 
   &:last-child {
     margin-bottom: 4rem;
