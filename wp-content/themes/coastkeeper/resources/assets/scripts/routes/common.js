@@ -149,7 +149,7 @@ export default {
     });
 
     //Add class to reveal text effect similar to above
-    $(".main h1, .main h2").each(function() {
+    $(".page-template-default .main h1, .page-template-default .main h2").each(function() {
       let currentLoad = this;
 
       var loadSections = new ScrollMagic.Scene({
@@ -159,6 +159,19 @@ export default {
         reverse: false,
       })
         .setClassToggle( currentLoad, "load-text")
+        .addTo(controller);
+    });
+
+    $(".one-column-section:not(.background-image-present) img, .posts-cell img").each(function() {
+      let currentLoad = this;
+
+      var loadSections = new ScrollMagic.Scene({
+        offset: 0,
+        triggerHook: 1,
+        triggerElement: currentLoad,
+        reverse: false,
+      })
+        .setClassToggle( currentLoad, "load-image")
         .addTo(controller);
     });
 
