@@ -1678,6 +1678,17 @@ $colors: (#d13447, #ffbf00, #263672);
   }
 }
 
+//Press Releases / General Archive
+.posts-cell .entry-summary {
+  padding-bottom: 4rem;
+}
+
+.category-press-releases {
+  .author {
+    display: none;
+  }
+}
+
 //footer
 .footer-email {
   background-color: #eee;

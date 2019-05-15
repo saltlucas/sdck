@@ -38,7 +38,9 @@
                 </div>
               <?php endif; ?>
             <?php endif; ?>
+            <?php if(!is_category(2180)): ?>
             <p class="author"><?php echo get_the_author_meta('display_name'); ?></p>
+            <?php endif; ?>
             <p class="date"><?php the_date(); ?></p>
             </div>
           </div>

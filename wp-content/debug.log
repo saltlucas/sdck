@@ -9024,3 +9024,35 @@ Stack trace:
 [14-May-2019 22:59:19 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:19 pm
 [14-May-2019 22:59:20 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:20 pm
 [14-May-2019 22:59:20 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 10:05:20 pm
+[14-May-2019 23:50:36 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:36 pm
+[14-May-2019 23:50:37 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:37 pm
+[14-May-2019 23:50:38 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:38 pm
+[14-May-2019 23:50:59 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:59 pm
+[14-May-2019 23:51:08 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:08 pm
+[14-May-2019 23:51:26 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:26 pm
+[14-May-2019 23:51:30 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:30 pm
+[14-May-2019 23:51:30 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 23:51:30 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 23:51:30 UTC] PHP Notice:  Undefined variable: hero in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 23:51:30 UTC] PHP Notice:  Undefined variable: hero_2x in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/441a9bd5069b8a0f2c94e90aeeb501ca2d5e8fbe.php on line 22
+[14-May-2019 23:51:34 UTC] the-events-calendar/common -  Log: Initializing Tribe Events on May, 14th at 11:05:34 pm
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: post_to_display in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 84
+[14-May-2019 23:51:34 UTC] PHP Notice:  Undefined variable: n in /Applications/AMPPS/www/sdck/wp-content/uploads/cache/7bcb31436d2eecd63cba271b64d7bee4db398321.php on line 119
