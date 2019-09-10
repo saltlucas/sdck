@@ -3,6 +3,9 @@
     <div class="grid-container">
     <h2 class="margin-bottom-medium">Get Your Water News</h2>
       <form class="newsletter-lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <script>
+         function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+        </script>
         <input type=hidden name='captcha_settings' value='{"keyname":"website_lead","fallback":"true","orgId":"00DG0000000C1g3","ts":""}'>
         <input type=hidden name="oid" value="00DG0000000C1g3">
         <input type=hidden name="retURL" value="https://www.sdcoastkeeper.org/newsletter-sign-up">
@@ -12,13 +15,12 @@
           </div>
           <div class="cell small-12 medium-4">
             <input class="text-field" placeholder="Last Name" id="last_name" maxlength="80" name="last_name" size="20" type="text" />
-
-            <div class="g-recaptcha" data-sitekey="6LemROkSAAAAAK1LHaoyST4UTJ49nUMZTTBkK7kM"></div>
           </div>
           <div class="cell small-12 medium-4">
             <input class="text-field" placeholder="Email Address"  id="email" maxlength="80" name="email" size="20" type="text" />
           </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LemROkSAAAAAK1LHaoyST4UTJ49nUMZTTBkK7kM"></div>
         <input type="submit" class="button blue-highlight" value="Sign Up" name="submit">
       </form>
     </div>

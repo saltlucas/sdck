@@ -14,10 +14,12 @@
   "fonts/geomanist-ultra-webfont.ttf": "fonts/geomanist-ultra-webfont_9bd2252e.ttf",
   "fonts/geomanist-ultra-webfont.woff": "fonts/geomanist-ultra-webfont_5be268c9.woff",
   "fonts/geomanist-ultra-webfont.woff2": "fonts/geomanist-ultra-webfont_9842597f.woff2",
+  "images/404-page-small.jpg": "images/404-page-small_8ba1662d.jpg",
+  "images/404-page.jpg": "images/404-page_5e348fe2.jpg",
   "images/logo-old.svg": "images/logo-old_3c5537e3.svg",
   "images/logo.svg": "images/logo_64c4a1b5.svg",
   "images/search-icon.svg": "images/search-icon_00685ab1.svg",
-  "scripts/customizer.js": "scripts/customizer_8034ccd3.js",
-  "styles/main.css": "styles/main_8034ccd3.css",
-  "scripts/main.js": "scripts/main_8034ccd3.js"
+  "scripts/customizer.js": "scripts/customizer_bea645aa.js",
+  "styles/main.css": "styles/main_bea645aa.css",
+  "scripts/main.js": "scripts/main_bea645aa.js"
 }

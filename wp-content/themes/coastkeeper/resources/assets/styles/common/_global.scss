@@ -48,6 +48,10 @@ article .one-column-section:not(.background-image-present):last-child {
 }
 
 //general
+[type=search]:focus {
+  background-color: transparent !important;
+}
+
 section {
   position: relative;
 }
@@ -59,13 +63,6 @@ section {
 
 .blue-highlight {
   background-color: $blue-highlight;
-}
-
-//Text
-h1,
-.h1 {
-  font-size: 3.4rem;
-  line-height: 4.5rem;
 }
 
 .text-white {
@@ -134,6 +131,10 @@ a {
 strong {
   font-family: $font-bold;
   font-weight: $font-weight-bold;
+}
+
+article ul {
+  padding-left: 1rem;
 }
 
 //lazyload
@@ -529,7 +530,6 @@ img:not([src]) {
 
 .is-dropdown-submenu {
   position: static;
-  display: block;
 }
 
 .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
@@ -540,7 +540,6 @@ img:not([src]) {
 .is-dropdown-submenu-parent.is-active > .sub-menu > .is-dropdown-submenu-parent > .sub-menu {
   position: static;
   border: none;
-  display: block;
   visibility: visible;
   height: auto !important;
 }
@@ -548,7 +547,7 @@ img:not([src]) {
 //Page header
 .page-header {
   .overlap-content {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .aspect-2-1 {
@@ -756,8 +755,8 @@ input[type=text] {
 
 #home-statement {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006799+0,0a435f+100&0.86+0,1+100 */
-  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 103, 153, 0.86) 0%, rgba(10, 67, 95, 1) 100%);
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 103, 153, 0.86) 0%, rgba(10, 67, 95, 1) 100%);
+  background: -moz-radial-gradient(center, ellipse farthest-corner, rgba(0, 103, 153, 0.86) 0%, rgba(10, 67, 95, 1) 100%);
+  background: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(0, 103, 153, 0.86) 0%, rgba(10, 67, 95, 1) 100%);
   background: radial-gradient(ellipse at center, rgba(0, 103, 153, 0.86) 0%, rgba(10, 67, 95, 1) 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#db006799', endColorstr='#0a435f', GradientType=1);
 
@@ -810,6 +809,21 @@ input[type=text] {
 .two-column-section {
   .grid-container {
     padding-top: 4rem;
+  }
+
+  .aspect-7-5 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 71.429% 0 0;
+  }
+
+  .cell:last-child {
+    margin-top: 2rem;
+  }
+
+  &:last-child .grid-container {
     padding-bottom: 4rem;
   }
 }
@@ -1046,6 +1060,10 @@ input[type=text] {
 //Tabs
 .tab-section {
   margin-top: 4rem;
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
 }
 
 #section-tabs {
@@ -1191,15 +1209,20 @@ input[type=text] {
       transition: background-color 0.4s;
     }
 
-    &:hover {
-      &::after {
-        background-color: rgba($blue-highlight, 0.8);
-      }
-    }
-
     .grid-x {
       position: relative;
       z-index: 3;
+    }
+  }
+
+  &.cell-link,
+  &.accomplishment_grid {
+    .background-content {
+      &:hover {
+        &::after {
+          background-color: rgba($blue-highlight, 0.8);
+        }
+      }
     }
   }
 
@@ -1304,9 +1327,15 @@ $colors: (#d13447, #ffbf00, #263672);
 }
 
 //Sponsors
-#sponsors .grid-container {
-  max-width: 800px;
-  padding-top: 4rem;
+.sponsors {
+  .grid-container {
+    max-width: 800px;
+    padding-top: 4rem;
+  }
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
 }
 
 .sponsor-cell {
@@ -1315,16 +1344,13 @@ $colors: (#d13447, #ffbf00, #263672);
   justify-content: center;
 
   img {
-    max-width: 200px;
+    max-width: 180px;
     max-height: 100px;
+    padding: 1rem;
   }
 }
 
 //Blog Template
-#posts-main-content {
-  margin-top: 4rem;
-}
-
 .template-blog .two-column-section .grid-container {
   max-width: 100%;
 }
@@ -1343,45 +1369,6 @@ $colors: (#d13447, #ffbf00, #263672);
 
 .article-meta {
   padding: 0 3rem;
-}
-
-.meta-wrap {
-  padding: 1rem;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+1,006797+69&0+0,0.9+69,0.9+100 */
-  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(125, 185, 232, 0.01) 1%, rgba(0, 103, 151, 0.9) 69%, rgba(0, 103, 151, 0.9) 100%);
-  background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(125, 185, 232, 0.01) 1%, rgba(0, 103, 151, 0.9) 69%, rgba(0, 103, 151, 0.9) 100%);
-  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(125, 185, 232, 0.01) 1%, rgba(0, 103, 151, 0.9) 69%, rgba(0, 103, 151, 0.9) 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#007db9e8', endColorstr='#e6006797', GradientType=0);
-}
-
-.author-image-wrap {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.blog-hero-header {
-  &.page-header {
-    .overlap-content {
-      padding-top: 0;
-    }
-  }
-
-  .author {
-    padding-bottom: 0.25rem;
-    margin: 0.25rem 0;
-    border-bottom: 2px solid rgba($white, 0.4);
-    color: $white;
-  }
-
-  .date {
-    margin: 0;
-    color: $white;
-    font-size: 14px;
-  }
 }
 
 .post-menu-wrap {
@@ -1497,13 +1484,6 @@ $colors: (#d13447, #ffbf00, #263672);
 }
 
 .top-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
   img {
     width: 100%;
     opacity: 0;
@@ -1678,15 +1658,66 @@ $colors: (#d13447, #ffbf00, #263672);
   }
 }
 
-//Press Releases / General Archive
-.posts-cell .entry-summary {
-  padding-bottom: 4rem;
-}
-
+//Press Releases
 .category-press-releases {
   .author {
     display: none;
   }
+}
+
+.nav-links {
+  padding-left: 2rem;
+}
+
+//Archive
+.archive-header h1 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+//404 page
+.div-404 .one-column-section.background-image-present {
+  height: calc(100vh - 76px);
+  margin-top: 0;
+
+  .grid-container {
+    height: 100%;
+  }
+
+  .background-image::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#006797+1,006797+37,006797+62,7db9e8+100&1+0,0+0,0.6+27,0.6+69,0+100 */
+
+    background: -moz-linear-gradient(top, rgba(0, 103, 151, 0) 0%, rgba(0, 103, 151, 0.02) 1%, rgba(0, 103, 151, 0.6) 27%, rgba(0, 103, 151, 0.6) 37%, rgba(0, 103, 151, 0.6) 62%, rgba(23, 118, 166, 0.6) 69%, rgba(125, 185, 232, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 103, 151, 0) 0%, rgba(0, 103, 151, 0.02) 1%, rgba(0, 103, 151, 0.6) 27%, rgba(0, 103, 151, 0.6) 37%, rgba(0, 103, 151, 0.6) 62%, rgba(23, 118, 166, 0.6) 69%, rgba(125, 185, 232, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 103, 151, 0) 0%, rgba(0, 103, 151, 0.02) 1%, rgba(0, 103, 151, 0.6) 27%, rgba(0, 103, 151, 0.6) 37%, rgba(0, 103, 151, 0.6) 62%, rgba(23, 118, 166, 0.6) 69%, rgba(125, 185, 232, 0) 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#00006797', endColorstr='#007db9e8', GradientType=0);
+  }
+
+  .search-form {
+    display: block;
+
+    .search-submit {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.blink {
+  animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
 //footer

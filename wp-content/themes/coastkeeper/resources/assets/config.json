@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/coastkeeper",
-  "devUrl": "http://dev-sdck.pantheonsite.io/",
+  "devUrl": "https://www.sdcoastkeeper.org/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

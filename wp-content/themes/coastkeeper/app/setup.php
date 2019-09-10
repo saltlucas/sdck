@@ -13,6 +13,9 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    if (is_singular('blog')) {
+      wp_enqueue_script('sage/addthis.js', asset_path('https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53b470657ed70ca2'), ['jquery'], null, true);
+    }
 }, 100);
 
 /**

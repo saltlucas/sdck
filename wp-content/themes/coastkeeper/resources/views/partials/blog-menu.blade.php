@@ -3,7 +3,7 @@
     <div class="grid-x">
       <div class="cell small-6">
         <header>
-          <h3 id="blog-scroll" class="shake">{{ get_the_title() }}</h3>
+          <h3 id="blog-scroll" class="shake">{{ get_the_archive_title( '', false ) }}</h3>
         </header>
       </div>
       <div class="cell small-6">

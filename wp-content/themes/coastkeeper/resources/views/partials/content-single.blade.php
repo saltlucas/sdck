@@ -19,7 +19,7 @@
     </div>
   </section>
 <?php endif; ?>
-  <section class="overlap-section grid-container <?php if(has_post_thumbnail($id)) { echo "background-header"; } else { echo "text-header"; } ?>">
+  <section class="overlap-section <?php if(has_post_thumbnail($id)) { echo "background-header"; } else { echo "text-header"; } ?>">
     <div class="overlap-content text-white">
         <div class="grid-x">
           <div class="cell small-12 medium-8 large-9">
@@ -38,7 +38,7 @@
                 </div>
               <?php endif; ?>
             <?php endif; ?>
-            <?php if(!is_category(2180)): ?>
+            <?php if(!is_category('2180')): ?>
             <p class="author"><?php echo get_the_author_meta('display_name'); ?></p>
             <?php endif; ?>
             <p class="date"><?php the_date(); ?></p>

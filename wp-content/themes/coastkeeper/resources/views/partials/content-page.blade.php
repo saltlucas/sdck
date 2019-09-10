@@ -121,8 +121,11 @@
           <?php endif; ?>
           <div class="grid-container">
             <?php if(get_sub_field('column')): ?>
-              <div @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="grid-x @if(get_sub_field('padding' != 'no-padding')) grid-padding-x @endif  @php App\printClass(); @endphp">
+              <?php $n = 1; ?>
               <?php while (have_rows('column')) : the_row(); ?>
+                <?php if($n==1 || $n%2==1): ?>
+                  <div @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="grid-x @if(get_sub_field('padding' != 'no-padding')) grid-padding-x @endif  @php App\printClass(); @endphp">
+                <?php endif; ?>
                 <div class="cell small-12 medium-6 @if(get_sub_field('background_image_7x5')) cell-background-image @endif">
                   <?php if(get_sub_field('background_image_7x5')): ?>
                     <div class="aspect aspect-7-5">
@@ -140,6 +143,10 @@
                     <?php the_sub_field('content'); ?>
                   </div>
                 </div>
+                <?php if($n%2==0): ?>
+                  </div>
+                <?php endif; ?>
+                <?php $n++; ?>
             <?php endwhile; ?>
             </div>
           <?php endif; ?>
@@ -265,7 +272,7 @@
             <div id="squares" class="grid-x squares grid-margin-x grid-margin-y large-up-2">
               <?php $n = 1; ?>
               <?php while ( have_rows('square') ) : the_row(); ?>
-                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
+                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> @if(get_sub_field('link')) cell-link @endif">
                   <?php $values = get_sub_field('new_tab');	?>
                   @if(get_sub_field('link'))
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
@@ -318,7 +325,7 @@
             <div id="squares" class="grid-x squares grid-margin-x grid-margin-y medium-up-2 large-up-3">
               <?php $n = 1; ?>
               <?php while ( have_rows('square') ) : the_row(); ?>
-                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?>">
+                <div class="cell square <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color') != 'white' && get_sub_field('background_color') != null ) { echo 'text-white'; } ?> @if(get_sub_field('link')) cell-link @endif">
                   <?php $values = get_sub_field('new_tab');	?>
                   <?php if(get_sub_field('link')): ?>
                   <a <?php if( is_array($values) && in_array("yes", $values )) { echo "target='_blank'"; } elseif ('yes' == $values) { echo "target='_blank'"; } ?> href="<?php the_sub_field('link'); ?>">
@@ -421,6 +428,7 @@
               </div>
               <?php $k++; ?>
           <?php endforeach; ?>
+          <?php if(get_sub_field('include_confetti')): ?>
           <div class="celebrate-wrapper">
             <div class="confetti-149"></div>
             <div class="confetti-148"></div>
@@ -573,6 +581,7 @@
             <div class="confetti-1"></div>
             <div class="confetti-0"></div>
           </div>
+          <?php endif; ?>
         </section>
       <?php elseif( get_row_layout() == 'staff' ): ?>
 				<section @if(get_sub_field('id')) id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" @endif class="three-square-grid square-grid text-white staff @php App\printClass(); @endphp">
@@ -648,9 +657,9 @@
         </section>
 
       <?php elseif( get_row_layout() == 'sponsors' ): ?>
-			<section id="sponsors">
+			<section class="sponsors">
         <div class="grid-container">
-          <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+          <div class="grid-x grid-padding-x small-up-1 medium-up-3">
           <?php
           if( have_rows('sponsor') ):
               while ( have_rows('sponsor') ) : the_row(); ?>
